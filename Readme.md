@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Алексей Жила](https://up.htmlacademy.ru/adaptive/18/user/1168065).
-* Наставник: Святослав Родионов.
+* Наставник: [Святослав Родионов](https://up.htmlacademy.ru/adaptive/18/user/454461).
 
 ---
 
