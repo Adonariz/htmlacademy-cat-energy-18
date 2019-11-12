@@ -29,7 +29,69 @@
     </header>
 
     <main>
+      <section class="program-selection">
+        <h1 class="program-selection__title">Подбор программы</h1>
+        <p class="program-selection__suggest">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        
+        <form class="program-selection__form form" action="https://echo.htmlacademy.ru" method="POST" >
 
+          <fieldset class="form__cat-data">
+            <label class="form__label" for="cat-name">Имя:*</label>
+            <input class="form__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
+            <label class="form__label" for="cat-weight">Вес (кг):*</label>
+            <input class="form__input" type="text" name="cat-weight" id="cat-weight" placeholder="7">
+            <label class="form__label" for="cat-age">Возраст (лет):*</label>
+            <input class="form__input" type="text" name="cat-age" id="cat-age" placeholder="7">
+          </fieldset>
+
+          <fieldset class="form__program-select">
+            <input class="form__input" type="radio" name="program-select" id="select-reduce" value="reduce">
+            <label class="form__label" for="select-reduce">Похудение</label>
+            <input class="form__input" type="radio" name="program-select" id="select-gain" value="gain">
+            <label class="form__label" for="select-gain">Набор массы</label>
+            <input class="form__input" type="radio" name="program-select" id="select-idk" value="idk">
+            <label class="form__label" for="select-idk">Не знаю (нужен ваш совет)</label>
+          </fieldset>
+
+          <fieldset class="form__owner-contacts">
+            <legend class="form__legend">Контактные данные (владельца кота)</legend>
+            <label class="form__label" for="email">E-mail:*</label>
+            <input class="form__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
+            <label class="form__label" for="phone">Телефон:*</label>
+            <input class="form__input" type="text" name="phone" id="phone" placeholder="8 (960) 900-60-90">
+          </fieldset>
+
+          <fieldset class="form__comment">
+            <legend class="form__legend">Комментарий</legend>
+            <textarea placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+
+          <fieldset class="form__additional-goods">
+            <legend class="form__legend">Дополнительно</legend>
+            <input class="form__input" type="checkbox" name="select-sugar" id="select-sugar" checked>
+            <label class="form__label" for="select-sugar">Сахарозаменитель</label>
+            <input class="form__input" type="checkbox" name="select-water" id="select-water">
+            <label class="form__label" for="select-water">Питьевая вода</label>
+            <input class="form__input" type="checkbox" name="select-milk" id="select-milk">
+            <label class="form__label" for="select-milk">Молоко</label>
+            <input class="form__input" type="checkbox" name="select-vitamins" id="select-vitamins">
+            <label class="form__label" for="select-vitamins">Витамины</label>
+          </fieldset>
+
+          <button type="submit">Отправить заявку</button>          
+          <small>* — Обязательные поля</small>
+
+        </form>
+      </section>
+
+      <section class="about-us">
+        <h2 class="visually-hidden">Адрес магазина</h2>
+        <div class="wrapper">
+          <b class="about-us__partnership">Приглашаем к сотрудничеству дилеров!</b>
+          <p class="about-us__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <img class="about-us__map-img" src="https://via.placeholder.com/150x150" alt="Адрес магазина на карте">
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer">
