@@ -1,0 +1,17 @@
+.catalog__spec {
+  font-size: 12px;
+  line-height: 1.33;
+  color: $color-3;
+}
+
+.catalog__more {
+  @include oswald-regular (16px, 1.25);
+  text-transform: uppercase;
+  color: $color-1;
+}
+
+.catalog__promo {
+  font-size: 12px;
+  line-height: 1.33;
+  color: $color-3;
+}

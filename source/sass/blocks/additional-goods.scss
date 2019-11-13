@@ -1,0 +1,26 @@
+.additional-goods__title {
+  @include oswald-regular (24px, 1);
+}
+
+.additional-goods__list {
+  @include list-reset;
+}
+
+.additional-goods__product-name {
+  @include oswald-regular (16px, 1);
+  text-transform: uppercase;
+}
+
+.additional-goods__spec {
+  font-size: 12px;
+  line-height: 1.33;
+  color: $color-3;
+}
+
+.additional-goods__promo {
+  font-size: 16px;
+  line-height: 1.25;
+  color: #ffffff;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}

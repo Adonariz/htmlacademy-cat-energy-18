@@ -1,0 +1,9 @@
+.product__product-name {
+  @include oswald-regular (16px, 1.25);
+  text-transform: uppercase;
+}
+
+.product__spec {
+  font-size: 12px;
+  line-height: 1.33;
+}
