@@ -1,0 +1,12 @@
+.advantages {
+  color: $color-3;
+}
+
+.advantages__title {
+  @include oswald-regular (36px, 1.67);
+  color: $color-1;
+}
+
+.advantages__list {
+  @include list-reset;
+}

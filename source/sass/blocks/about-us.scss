@@ -1,0 +1,17 @@
+.about-us {
+  background-color: $color-6;
+}
+
+.about-us--index {
+  background-color: #ffffff;
+}
+
+.about-us__partnership {
+  @include oswald-regular (16px, 1.25);
+  text-transform: uppercase;
+}
+
+.about-us__adress {
+  line-height: 1.43;
+  color: $color-3;
+}

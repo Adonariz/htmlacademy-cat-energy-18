@@ -1,7 +1,10 @@
 .intro {
   @include oswald-regular (14px, 1);
   color: #ffffff;
-  background-color: $color-5;
+  background-image: url("/img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  object-fit: fill;
   text-align: center;
 }
 

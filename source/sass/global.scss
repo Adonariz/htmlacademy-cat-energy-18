@@ -1,6 +1,7 @@
 body {
   @include arial (14px, 1.29);
   color: $color-1;
+  box-sizing: border-box;
 }
 
 a {
