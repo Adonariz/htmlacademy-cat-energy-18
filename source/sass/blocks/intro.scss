@@ -1,0 +1,15 @@
+.intro {
+  @include oswald-regular (14px, 1);
+  color: #ffffff;
+  background-color: $color-5;
+  text-align: center;
+}
+
+.intro__title {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.intro__slogan {
+  text-transform: uppercase;
+}

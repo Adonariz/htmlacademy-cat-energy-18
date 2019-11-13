@@ -1,0 +1,9 @@
+.main-nav {
+  @include oswald-medium (20px, 1);
+  text-transform: uppercase;
+}
+
+.main-nav__list {
+  @include list-reset;
+  text-align: center;
+}

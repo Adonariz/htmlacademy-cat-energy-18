@@ -1,0 +1,19 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 280px;
+  min-height: 40px;
+  @include oswald-regular (16px, 1.25);
+  color: #ffffff;
+  outline: 1px solid red;
+}
+
+.button--green {
+  background-color: $color-5;
+}
+
+.button--gray {
+  color: $color-3;
+  background-color: $color-6;
+}
