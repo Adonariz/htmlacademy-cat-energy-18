@@ -1,0 +1,8 @@
+body {
+  @include arial (14px, 18px);
+  color: $color-1;
+}
+
+a {
+  text-decoration: none;
+}
