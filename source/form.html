@@ -29,13 +29,80 @@
     </header>
 
     <main>
+      <section class="program-selection">
+        <h1 class="program-selection__title">Подбор программы</h1>
+        <p class="program-selection__suggest">Заполните анкету и мы подберем программу питания для вашего кота</p>
 
+        <form class="program-selection__form selection-form" action="https://echo.htmlacademy.ru" method="POST" >
+
+          <fieldset class="selection-form__cat-data">
+            <label class="selection-form__label" for="cat-name">Имя:*
+              <input class="selection-form__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
+            </label>
+            <label class="selection-form__label" for="cat-weight">Вес (кг):*
+              <input class="selection-form__input" type="text" name="cat-weight" id="cat-weight" placeholder="7">
+            </label>
+            <label class="selection-form__label" for="cat-age">Возраст (лет):*
+              <input class="selection-form__input" type="text" name="cat-age" id="cat-age" placeholder="7">
+            </label>
+          </fieldset>
+
+          <fieldset class="selection-form__program-select">
+            <input class="selection-form__input" type="radio" name="program-select" id="select-reduce" value="reduce">
+            <label class="selection-form__label" for="select-reduce">Похудение</label>
+            <input class="selection-form__input" type="radio" name="program-select" id="select-gain" value="gain">
+            <label class="selection-form__label" for="select-gain">Набор массы</label>
+            <input class="selection-form__input" type="radio" name="program-select" id="select-idk" value="idk">
+            <label class="selection-form__label" for="select-idk">Не знаю (нужен ваш совет)</label>
+          </fieldset>
+
+          <fieldset class="selection-form__owner-contacts">
+            <legend class="selection-form__legend">Контактные данные (владельца кота)</legend>
+            <label class="selection-form__label" for="email">E-mail:*
+              <input class="selection-form__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
+            </label>
+            <label class="selection-form__label" for="phone">Телефон:*
+              <input class="selection-form__input" type="text" name="phone" id="phone" placeholder="8 (960) 900-60-90">
+            </label>
+          </fieldset>
+
+          <fieldset class="selection-form__comment">
+            <legend class="selection-form__legend">Комментарий</legend>
+            <textarea placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+
+          <fieldset class="selection-form__additional-goods">
+            <legend class="selection-form__legend">Дополнительно</legend>
+            <input class="selection-form__input" type="checkbox" name="select-sugar" id="select-sugar" checked>
+            <label class="selection-form__label" for="select-sugar">Сахарозаменитель</label>
+            <input class="selection-form__input" type="checkbox" name="select-water" id="select-water">
+            <label class="selection-form__label" for="select-water">Питьевая вода</label>
+            <input class="selection-form__input" type="checkbox" name="select-milk" id="select-milk">
+            <label class="selection-form__label" for="select-milk">Молоко</label>
+            <input class="selection-form__input" type="checkbox" name="select-vitamins" id="select-vitamins">
+            <label class="selection-form__label" for="select-vitamins">Витамины</label>
+          </fieldset>
+
+          <button type="submit">Отправить заявку</button>
+          <small>* — Обязательные поля</small>
+
+        </form>
+      </section>
+
+      <section class="about-us">
+        <h2 class="visually-hidden">Адрес магазина</h2>
+        <div class="wrapper">
+          <b class="about-us__partnership">Приглашаем к сотрудничеству дилеров!</b>
+          <p class="about-us__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <img class="about-us__map-img" src="https://via.placeholder.com/150x150" alt="Адрес магазина на карте">
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer">
         <div class="wrapper">
           <a class="page-footer__logo">
-            <img class="logo" src="https://via.placeholder.com/150x150" alt="Логотип">
+            <img class="page-footer__logo-img" src="https://via.placeholder.com/150x150" alt="Логотип">
           </a>
           <ul class="social">
             <li class="social__link social__link--vk">
