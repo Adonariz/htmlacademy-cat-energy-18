@@ -1,0 +1,21 @@
+.programs__list {
+  @include list-reset;
+}
+
+.programs__item {
+  background-color: $color-6;
+}
+
+.programs__title {
+  @include oswald-regular (24px, 1.54);
+  text-transform: uppercase;
+}
+
+.programs__description {
+  color: $color-3;
+}
+
+.programs__link {
+  @include oswald-regular (16px, 1);
+  text-transform: uppercase;
+}
