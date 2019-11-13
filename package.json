@@ -10,8 +10,9 @@
     "gulp": "^4.0.2",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "8.0.x",
-    "gulp-sass": "4.0.x",
+    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "2.6.x",
+    "node-sass": "^4.13.0",
     "stylelint": "10.1.x",
     "stylelint-config-htmlacademy": "^0.1.4"
   },
@@ -38,7 +39,5 @@
   "engines": {
     "node": "8.16"
   },
-  "dependencies": {
-    "node-sass": "^4.13.0"
-  }
+  "dependencies": {}
 }
