@@ -1,17 +1,33 @@
+.catalog__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog__page-title {
+  @include oswald-regular (36px, 1.67);
+}
+
+.catalog__item {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 210px;
+  outline: 1px solid red;
+}
+
 .catalog__spec {
   font-size: 12px;
   line-height: 1.33;
-  color: $color-3;
+  color: $greyish-brown;
 }
 
 .catalog__more {
   @include oswald-regular (16px, 1.25);
   text-transform: uppercase;
-  color: $color-1;
+  color: $black-1;
 }
 
 .catalog__promo {
   font-size: 12px;
   line-height: 1.33;
-  color: $color-3;
+  color: $greyish-brown;
 }

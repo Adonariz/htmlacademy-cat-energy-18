@@ -1,6 +1,6 @@
 .intro {
   @include oswald-regular (14px, 1);
-  color: #ffffff;
+  color: $white-1;
   background-image: url("/img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
@@ -11,6 +11,7 @@
 .intro__title {
   font-size: 36px;
   line-height: 36px;
+  margin: 0;
 }
 
 .intro__slogan {

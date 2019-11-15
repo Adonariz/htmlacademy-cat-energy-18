@@ -12,16 +12,16 @@
           <a class="main-nav__logo">
             <img class="main-nav__logo-img" src="/img/logo-mobile.svg" alt="Логотип" width="191" height="39">
           </a>
-          <button class="main-nav__menu-button" type="button"></button>
+          <button class="main-nav__menu-button main-nav__menu-button--hidden" type="button">Кнопка меню</button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="index.html">Главная</a>
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a>Каталог продукции</a>
+              <a class="main-nav__link">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
-              <a href="form.html">Подбор программы</a>
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -29,13 +29,11 @@
     </header>
 
     <main>
-      <h1 class="page-title">Каталог продукции</h1>
       <section class="catalog">
-        <h2 class="visually-hidden">Основная продукция</h2>
-        <div class="wrapper">
-
+        <div class="wrapper catalog__wrapper">
+          <h1 class="catalog__page-title">Каталог продукции</h1>
           <article class="catalog__item product">
-            <img src="https://via.placeholder.com/150x150" alt="Cat Energy Pro 500 г со вкусом курицы">
+            <img src="img/chicken-small-mobile@1x.jpg" alt="Cat Energy Pro 500 г со вкусом курицы" width="140" height="144">
             <h3 class="product__product-name">Cat Energy Pro 500 г</h3>
             <table class="product__spec spec-table">
               <tr class="spec-table__row">
@@ -55,7 +53,7 @@
           </article>
 
           <article class="catalog__item product">
-            <img src="https://via.placeholder.com/150x150" alt="Cat Energy Pro 1000 г со вкусом курицы">
+            <img src="img/chicken-big-mobile@1x.jpg" alt="Cat Energy Pro 1000 г со вкусом курицы" width="140" height="144">
             <h3 class="product__product-name">Cat Energy Pro 1000 г</h3>
             <table class="product__spec spec-table">
               <tr class="spec-table__row">
@@ -75,7 +73,7 @@
           </article>
 
           <article class="catalog__item product">
-            <img src="https://via.placeholder.com/150x150" alt="Cat Energy Pro 500 г со вкусом рыбы">
+            <img src="img/fish-small-mobile@1x.jpg" alt="Cat Energy Pro 500 г со вкусом рыбы" width="140" height="144">
             <h3 class="product__product-name">Cat Energy Pro 500 г</h3>
             <table class="product__spec spec-table">
               <tr class="spec-table__row">
@@ -95,7 +93,7 @@
           </article>
 
           <article class="catalog__item product">
-            <img src="https://via.placeholder.com/150x150" alt="Cat Energy Pro 1000 г со вкусом рыбы">
+            <img src="img/fish-big-mobile@1x.jpg" alt="Cat Energy Pro 1000 г со вкусом рыбы" width="140" height="144">
             <h3 class="product__product-name">Cat Energy Pro 1000 г</h3>
             <table class="product__spec spec-table">
               <tr class="spec-table__row">
@@ -115,7 +113,7 @@
           </article>
 
           <article class="catalog__item product">
-            <img src="https://via.placeholder.com/150x150" alt="Cat Energy Slim 500 г со вкусом гречки">
+            <img src="img/buckwheat-small-mobile@1x.jpg" alt="Cat Energy Slim 500 г со вкусом гречки" width="140" height="144">
             <h3 class="product__product-name">Cat Energy Slim 500 г</h3>
             <table class="product__spec spec-table">
               <tr class="spec-table__row">
@@ -135,7 +133,7 @@
           </article>
 
           <article class="catalog__item product">
-            <img src="https://via.placeholder.com/150x150" alt="Cat Energy Slim 1000 г со вкусом гречки">
+            <img src="img/buckwheat-big-mobile@1x.jpg" alt="Cat Energy Slim 1000 г со вкусом гречки" width="140" height="144">
             <h3 class="product__product-name">Cat Energy Slim 1000 г</h3>
             <table class="product__spec spec-table">
               <tr class="spec-table__row">
@@ -155,7 +153,7 @@
           </article>
 
           <article class="catalog__item product">
-            <img src="https://via.placeholder.com/150x150" alt="Cat Energy Slim 500 г со вкусом риса">
+            <img src="img/rice-small-mobile@1x.jpg" alt="Cat Energy Slim 500 г со вкусом риса" width="140" height="144">
             <h3 class="product__product-name">Cat Energy Slim 500 г</h3>
             <table class="product__spec spec-table">
               <tr class="spec-table__row">
@@ -233,20 +231,22 @@
 
       <section class="about-us about-us--index">
         <h2 class="visually-hidden">Адрес магазина</h2>
-        <div class="wrapper">
+        <div class="wrapper about-us__wrapper">
           <p class="about-us__partnership">Приглашаем к сотрудничеству дилеров!</pa>
-          <p class="about-us__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <p class="about-us__adress">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 Санкт-Петербург</p>
+        </div>
+        <div class="about-us__map">
           <img class="about-us__map-img" src="/img/bg-map-mobile@1x.png" alt="Адрес магазина на карте" width="320" height="400">
         </div>
       </section>
     </main>
 
     <footer class="page-footer">
-      <div class="wrapper">
+      <div class="wrapper page-footer__wrapper">
         <a class="page-footer__logo">
           <img class="page-footer__logo-img" src="img/logo-footer.svg" alt="Логотип" width="128" height="24">
         </a>
-        <ul class="social">
+        <ul class="page-footer__social social">
           <li class="social__link social__link--vk">
             <a href="#" title="Наш Вконтакте">Вконтакте</a>
           </li>
@@ -257,9 +257,9 @@
             <a href="#" title="Наш Фейсбук">Фейсбук</a>
           </li>
         </ul>
-        <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive" title="Профессиональный HTML и CSS, уровень 2">
+        <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" title="Профессиональный HTML и CSS, уровень 2">
           HTML Academy
-          <img class="copyright__logo" src="/img/htmlacademy.svg" alt="Логотип Академии" width="27" height="34">
+          <img class="page-footer__academy-logo" src="/img/htmlacademy.svg" alt="Логотип Академии" width="27" height="34">
         </a>
       </div>
     </footer>

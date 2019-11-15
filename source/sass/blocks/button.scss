@@ -6,16 +6,16 @@
   height: 40px;
 
   @include oswald-regular (16px, 1.25);
-  color: #ffffff;
+  color: $white-1;
   text-transform: uppercase;
   outline: 1px solid red;
 }
 
 .button--green {
-  background-color: $color-5;
+  background-color: $leaf;
 }
 
 .button--gray {
-  color: $color-3;
-  background-color: $color-6;
+  color: $greyish-brown;
+  background-color: $light-grey;
 }

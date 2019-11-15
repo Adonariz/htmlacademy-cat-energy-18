@@ -1,7 +1,9 @@
+/*@import "outline"; /*Не забыть удалить*/
 @import "fonts";
 @import "variables";
 @import "mixins";
 @import "global";
+@import "normalize.scss";
 @import "blocks/visually-hidden";
 @import "blocks/wrapper";
 @import "blocks/main-nav";
@@ -10,7 +12,6 @@
 @import "blocks/programs";
 @import "blocks/advantages";
 @import "blocks/about-us";
-@import "blocks/page-title";
 @import "blocks/catalog";
 @import "blocks/product";
 @import "blocks/spec-table";

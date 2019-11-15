@@ -1,12 +1,30 @@
 .advantages {
-  color: $color-3;
+  color: $greyish-brown;
 }
 
 .advantages__title {
   @include oswald-regular (36px, 1.67);
-  color: $color-1;
+  color: $black-1;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .advantages__list {
   @include list-reset;
+}
+
+.advantages__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.advantages__item::before {
+  content: "";
+  display: flex;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  background-color: $leaf;
 }
