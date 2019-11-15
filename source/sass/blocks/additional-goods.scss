@@ -6,6 +6,11 @@
   @include list-reset;
 }
 
+.additional-goods__item {
+  display: flex;
+  flex-direction: column;
+}
+
 .additional-goods__product-name {
   @include oswald-regular (16px, 1);
   text-transform: uppercase;
@@ -17,10 +22,23 @@
   color: $greyish-brown;
 }
 
+.additional-goods__promo-wrapper {
+  display: flex;
+  min-height: 289px;
+  text-align: center;
+
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
 .additional-goods__promo {
+  width: 160px;
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: 41px;
+  margin-left: auto;
+
   font-size: 16px;
   line-height: 1.25;
   color: $white-1;
-  background-image: url("../img/gift-photo-mobile@1x.jpg");
-  background-repeat: no-repeat;
 }

@@ -7,27 +7,27 @@
   @include oswald-regular (36px, 1.67);
 }
 
-.catalog__item {
+.catalog__more {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   min-height: 210px;
+  align-items: center;
   outline: 1px solid red;
 }
 
-.catalog__spec {
-  font-size: 12px;
-  line-height: 1.33;
-  color: $greyish-brown;
-}
-
-.catalog__more {
+.catalog__show-more {
   @include oswald-regular (16px, 1.25);
   text-transform: uppercase;
   color: $black-1;
+  margin-top: auto;
 }
 
 .catalog__promo {
   font-size: 12px;
   line-height: 1.33;
   color: $greyish-brown;
+}
+
+.catalog__link {
+  margin-bottom: 20px;
 }
