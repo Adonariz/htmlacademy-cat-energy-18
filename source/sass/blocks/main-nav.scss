@@ -1,0 +1,56 @@
+.main-nav {
+  @include oswald-medium (20px, 1);
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-nav__logo {
+  display: flex;
+  margin-top: 11px;
+  margin-bottom: 15px;
+}
+
+.main-nav__menu-button {
+  width: 25px;
+  height: 19px;
+  margin-top: 23px;
+  margin-left: auto;
+
+  border: none;
+  background: none;
+  outline: 1px solid red;
+}
+
+.main-nav__menu-button--hidden {
+  /*visibility: hidden;*/
+}
+
+.main-nav__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.main-nav__item {
+  display: flex;
+  position: relative;
+}
+
+.main-nav__item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 320px;
+  left: -20px;
+  background-color: $light-grey;
+}
+
+.main-nav__link {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 280px;
+  outline: 1px solid red;
+}

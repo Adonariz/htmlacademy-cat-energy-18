@@ -1,0 +1,21 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 40px;
+
+  @include oswald-regular (16px, 1.25);
+  color: $white-1;
+  text-transform: uppercase;
+  outline: 1px solid red;
+}
+
+.button--green {
+  background-color: $leaf;
+}
+
+.button--gray {
+  color: $greyish-brown;
+  background-color: $light-grey;
+}

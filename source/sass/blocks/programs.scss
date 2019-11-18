@@ -1,0 +1,34 @@
+.programs__list {
+  @include list-reset;
+}
+
+.programs__item {
+  margin-top: 20px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: $light-grey;
+}
+
+.programs__title {
+  @include oswald-regular (24px, 1.54);
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 1.54;
+
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.programs__description {
+  color: $greyish-brown;
+  margin: 0;
+}
+
+.programs__link {
+  @include oswald-regular (16px, 1);
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 22px;
+}

@@ -1,0 +1,31 @@
+.about-us {
+  background-color: $light-grey;
+}
+
+.about-us--index {
+  background-color: $white-1;
+}
+
+.about-us__wrapper {
+  display: flex;
+  outline: 1px solid red;
+}
+
+.about-us__partnership {
+  @include oswald-regular (16px, 1.25);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.about-us__adress {
+  min-width: 134px;
+  margin: 0;
+  line-height: 1.43;
+  color: $greyish-brown;
+  outline: 1px solid red;
+}
+
+.about-us__map-img {
+  display: block;
+  margin: 0 auto;
+}

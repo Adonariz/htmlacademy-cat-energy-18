@@ -1,0 +1,26 @@
+.page-footer {
+  background-color: $light-grey;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-footer__logo {
+  margin-top: 39px;
+  margin-bottom: 31px;
+}
+
+.page-footer__copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  font-size: 16px;
+  line-height: 1;
+  color: $greyish-brown;
+}

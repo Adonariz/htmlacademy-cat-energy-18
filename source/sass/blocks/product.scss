@@ -1,0 +1,32 @@
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  height: 210px;
+  outline: 1px solid red;
+}
+
+.product__description {
+  outline: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  height: 144px;
+}
+
+.product__product-name {
+  @include oswald-regular (16px, 1.25);
+  text-transform: uppercase;
+  outline: 1px solid red;
+  width: 100px;
+  margin-top: 25px;
+}
+
+.product__spec {
+  font-size: 12px;
+  line-height: 1.33;
+  color: $greyish-brown;
+}
+
+.product__link {
+  margin-bottom: 25px;
+}
