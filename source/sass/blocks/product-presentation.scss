@@ -1,0 +1,35 @@
+.product-presentation {
+  background-color: $light-grey;
+}
+
+.product-presentation__title {
+  @include oswald-regular (36px, 1.67);
+}
+
+.product-presentation__description {
+  color: $greyish-brown;
+}
+
+.product-presentation__term {
+  font-size: 12px;
+  line-height: 1;
+  color: $greyish-brown;
+  text-transform: lowercase;
+}
+
+.product-presentation__definition {
+  @include oswald-regular (24px, 1);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.product-presentation__costs {
+  @include oswald-regular (14px, 1.43);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.product-presentation__label {
+  @include oswald-regular (16px, 1.25);
+  text-transform: uppercase;
+}

@@ -1,0 +1,87 @@
+.program-selection__title {
+  @include oswald-regular (36px, 1.67);
+}
+
+.program-selection__suggest {
+  @include oswald-regular (14px, 1.29);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.selection-form__label {
+  @include oswald-regular (16px, 1.13);
+  color: $black-2;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+.selection-form__legend {
+  @include oswald-regular (24px, 1);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.selection-form__input {
+  @include oswald-regular (16px, 1.13);
+  color: $greyish-brown;
+  text-transform: uppercase;
+
+  flex-grow: 1;
+  height: 40px;
+  margin-left: 16px;
+  padding-left: 16px;
+  border: 1px solid rgba(#cdcdcd, 0.5);
+}
+
+.selection-form__cat-data {
+  @include fieldset-reset;
+  display: flex;
+  flex-direction: column;
+}
+
+.selection-form__program-select {
+  @include fieldset-reset;
+  display: flex;
+  flex-direction: column;
+}
+
+.selection-form__owner-contacts {
+  @include fieldset-reset;
+  display: flex;
+  flex-direction: column;
+}
+
+.selection-form__comment {
+  @include fieldset-reset;
+}
+
+.selection-form__comment-area {
+  @include oswald-regular (16px, 1.13);
+  color: $greyish-brown;
+  text-transform: uppercase;
+
+  display: flex;
+  min-height: 150px;
+  min-width: 280px;
+  padding: 0;
+
+  border: 1px solid rgba(#cdcdcd, 0.5);
+  resize: none;
+  overflow: auto;
+}
+
+.selection-form__additional-goods {
+  @include fieldset-reset;
+}
+
+.selection-form__asterisk {
+  display: block;
+  text-align: center;
+  line-height: 1.14;
+  margin-top: 23px;
+  margin-bottom: 34px;
+}

@@ -8,13 +8,15 @@
 
 .about-us__wrapper {
   display: flex;
-  outline: 1px solid red;
+  padding-top: 31px;
+  padding-bottom: 26px;
 }
 
 .about-us__partnership {
   @include oswald-regular (16px, 1.25);
   text-transform: uppercase;
   margin: 0;
+  margin-right: 19px;
 }
 
 .about-us__adress {
@@ -22,7 +24,6 @@
   margin: 0;
   line-height: 1.43;
   color: $greyish-brown;
-  outline: 1px solid red;
 }
 
 .about-us__map-img {
