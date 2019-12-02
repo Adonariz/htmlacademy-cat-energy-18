@@ -14,6 +14,10 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  &:last-of-type {
+    margin-right: 0;
+  }
+
   &--vk {
     background-image: url("../../img/icon-vk.svg");
     background-size: 30px 16px;

@@ -1,5 +1,5 @@
 .additional-goods__title {
-  @include oswald-regular (24px, 1);
+  @include oswald (24px, 1, 400);
 }
 
 .additional-goods__list {
@@ -12,7 +12,7 @@
 }
 
 .additional-goods__product-name {
-  @include oswald-regular (16px, 1);
+  @include oswald (16px, 1, 400);
   text-transform: uppercase;
 }
 
@@ -20,6 +20,7 @@
   font-size: 12px;
   line-height: 1.33;
   color: $greyish-brown;
+  border-collapse: collapse;
 }
 
 .additional-goods__promo-wrapper {
@@ -27,6 +28,7 @@
   min-height: 289px;
   text-align: center;
 
+  background-color: $leaf;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
 }
@@ -41,4 +43,99 @@
   font-size: 16px;
   line-height: 1.25;
   color: $white-1;
+}
+
+@media (min-width: $tablet) {
+  .additional-goods__title {
+    font-size: 36px;
+    line-height: 1;
+    width: 340px;
+    margin-top: 70px;
+    margin-bottom: 75px;
+    padding-right: 30px;
+    padding-left: 30px;
+    position: relative;
+    background-color: $white-1;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 768px;
+      height: 3px;
+      position: absolute;
+      bottom: 10px;
+      left: -30px;
+      z-index: -1;
+      background-color: $leaf;
+    }
+  }
+
+  .additional-goods__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    border: 1px solid #cdcdcd;
+
+    &:nth-of-type(n):not(:last-of-type) {
+      margin-bottom: -1px;
+    }
+  }
+
+  .additional-goods__product-name {
+    font-size: 20px;
+    line-height: 1;
+    margin: 0;
+    margin-top: 28px;
+    margin-bottom: 25px;
+    margin-left: 40px;
+    outline: 1px solid red;
+  }
+
+  .additional-goods__spec {
+    margin-right: 38px;
+    margin-bottom: 23px;
+    margin-left: auto;
+    text-align: right;
+  }
+
+  .additional-goods__spec-value {
+    width: 95px;
+  }
+
+  .additional-goods__link {
+    width: 633px;
+    margin-bottom: 28px;
+    margin-left: 38px;
+  }
+
+  .additional-goods__promo-wrapper {
+    display: flex;
+    min-height: 200px;
+    margin-top: 70px;
+    margin-bottom: 75px;
+    background-image: url("../../img/gift-photo-tablet@1x.jpg");
+  }
+
+  .additional-goods__promo {
+    text-align: left;
+    margin: 0;
+    margin-top: 75px;
+    margin-right: 125px;
+    margin-left: auto;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 56px;
+      height: 61px;
+
+      position: absolute;
+      left: -330px;
+      top: -10px;
+
+      background-image: url("../../img/icon-gift.svg");
+    }
+  }
 }

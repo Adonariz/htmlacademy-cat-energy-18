@@ -4,7 +4,7 @@
 }
 
 .catalog__page-title {
-  @include oswald-regular (36px, 1.67);
+  @include oswald (36px, 1.67, 400);
 }
 
 .catalog__more {
@@ -16,7 +16,7 @@
 }
 
 .catalog__show-more {
-  @include oswald-regular (16px, 1.25);
+  @include oswald (16px, 1.25, 400);
   text-transform: uppercase;
   color: $black-1;
   margin-top: auto;
@@ -30,4 +30,55 @@
 
 .catalog__link {
   margin-bottom: 20px;
+}
+
+@media (min-width: $tablet) {
+  .catalog__page-title {
+    font-size: 60px;
+    line-height: 1;
+  }
+
+  .catalog__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .catalog__more {
+    width: 324px;
+    min-height: 432px;
+    margin-left: 60px;
+    text-align: center;
+  }
+
+  .catalog__show-more {
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 28px;
+    width: 135px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 61px;
+      height: 61px;
+
+      margin-right: auto;
+      margin-bottom: 50px;
+      margin-left: auto;
+
+      background-image: url("../../img/icon-plus.svg");
+      opacity: 0.2;
+    }
+  }
+
+  .catalog__promo {
+    font-size: 16px;
+    line-height: 1;
+    width: 170px;
+    margin-bottom: 85px;
+  }
+
+  .catalog__link {
+    margin-bottom: 40px;
+  }
 }
