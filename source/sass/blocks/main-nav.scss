@@ -40,7 +40,7 @@
 
 @media (max-width: $mobile) {
   .main-nav {
-    @include oswald-medium (20px, 1);
+    @include oswald (20px, 1, 500);
   }
 
   .main-nav__item {
@@ -59,7 +59,7 @@
 
 @media (min-width: $tablet) {
   .main-nav {
-    @include oswald-regular (18px, 1.39);
+    @include oswald (18px, 1.39, 400);
     margin-top: 24px;
     width: 708px;
     padding: 0 30px;
@@ -70,6 +70,7 @@
   }
 
   .main-nav__list {
+    margin-right: 20px;
     margin-left: auto;
   }
 
@@ -79,7 +80,6 @@
   }
 
   .main-nav__link {
-    outline: 1px solid red;
     padding: 10px 0;
   }
 
