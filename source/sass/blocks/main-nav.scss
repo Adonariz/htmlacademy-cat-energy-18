@@ -1,5 +1,5 @@
 .main-nav {
-  @include oswald-medium (20px, 1);
+  margin: 0 auto;
   text-transform: uppercase;
   display: flex;
   flex-wrap: wrap;
@@ -22,10 +22,6 @@
   outline: 1px solid red;
 }
 
-.main-nav__menu-button--hidden {
-  /*visibility: hidden;*/
-}
-
 .main-nav__list {
   @include list-reset;
   display: flex;
@@ -35,22 +31,59 @@
 
 .main-nav__item {
   display: flex;
-  position: relative;
-}
-
-.main-nav__item::before {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 1px;
-  width: 320px;
-  left: -20px;
-  background-color: $light-grey;
 }
 
 .main-nav__link {
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 280px;
-  outline: 1px solid red;
+}
+
+@media (max-width: $mobile) {
+  .main-nav {
+    @include oswald-medium (20px, 1);
+  }
+
+  .main-nav__item {
+    width: 100%;
+    border-top: 1px solid $light-grey;
+
+    &:last-of-type {
+      border-bottom: 1px solid $light-grey;
+    }
+  }
+
+  .main-nav__link {
+    width: 100%;
+  }
+}
+
+@media (min-width: $tablet) {
+  .main-nav {
+    @include oswald-regular (18px, 1.39);
+    margin-top: 24px;
+    width: 708px;
+    padding: 0 30px;
+  }
+
+  .main-nav__menu-button {
+    display: none;
+  }
+
+  .main-nav__list {
+    margin-left: auto;
+  }
+
+  .main-nav__item {
+    margin-left: 38px;
+    align-items: center;
+  }
+
+  .main-nav__link {
+    outline: 1px solid red;
+    padding: 10px 0;
+  }
+
+  .main-nav__link--active {
+    border-bottom: 2px solid $leaf;
+  }
 }

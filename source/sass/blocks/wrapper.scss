@@ -1,5 +1,23 @@
 .wrapper {
   margin: 0 auto;
-  width: 280px;
-  padding: 0 20px;
+  outline: 1px solid red;
+}
+
+@media (max-width: $mobile) {
+  .wrapper {
+    width: 280px;
+    padding: 0 20px;
+  }
+
+  .wrapper--nav-mobile {
+    width: 320px;
+    padding: 0;
+  }
+}
+
+@media (min-width: $tablet) {
+  .wrapper {
+    width: 708px;
+    padding: 0 30px;
+  }
 }
