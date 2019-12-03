@@ -1,5 +1,17 @@
 .additional-goods__title {
   @include oswald (24px, 1, 400);
+  margin: 0;
+  position: relative;
+  background-color: $white-1;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    z-index: -1;
+    background-color: $leaf;
+  }
 }
 
 .additional-goods__list {
@@ -14,6 +26,7 @@
 .additional-goods__product-name {
   @include oswald (16px, 1, 400);
   text-transform: uppercase;
+  margin: 0;
 }
 
 .additional-goods__spec {
@@ -21,6 +34,10 @@
   line-height: 1.33;
   color: $greyish-brown;
   border-collapse: collapse;
+}
+
+.additional-goods__spec-value {
+  text-align: right;
 }
 
 .additional-goods__promo-wrapper {
@@ -43,6 +60,65 @@
   font-size: 16px;
   line-height: 1.25;
   color: $white-1;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 61px;
+
+    position: absolute;
+    background-image: url("../../img/icon-gift.svg");
+  }
+}
+
+@media (max-width: $mobile) {
+  .additional-goods__title {
+    width: 250px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &::before {
+      width: 300px;
+      top: 45px;
+    }
+  }
+
+  .additional-goods__item {
+    border-top: 1px solid rgba(#000000, 0.1);
+
+    &:last-of-type {
+      border-bottom: 1px solid rgba(#000000, 0.1);
+    }
+  }
+
+  .additional-goods__product-name {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .additional-goods__spec {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .additional-goods__link {
+    margin-bottom: 17px;
+  }
+
+  .additional-goods__promo-wrapper {
+    margin-top: 40px;
+    margin-bottom: 35px;
+  }
+
+  .additional-goods__promo {
+    &::before {
+      bottom: 125px;
+      left: calc((160px - 56px) / 2);
+    }
+  }
 }
 
 @media (min-width: $tablet) {
@@ -50,7 +126,7 @@
     font-size: 36px;
     line-height: 1;
     width: 340px;
-    margin-top: 70px;
+    padding-top: 70px;
     margin-bottom: 75px;
     padding-right: 30px;
     padding-left: 30px;
@@ -61,12 +137,9 @@
       content: "";
       display: block;
       width: 768px;
-      height: 3px;
-      position: absolute;
+
       bottom: 10px;
       left: -30px;
-      z-index: -1;
-      background-color: $leaf;
     }
   }
 
@@ -126,16 +199,8 @@
     position: relative;
 
     &::before {
-      content: "";
-      display: block;
-      width: 56px;
-      height: 61px;
-
-      position: absolute;
       left: -330px;
       top: -10px;
-
-      background-image: url("../../img/icon-gift.svg");
     }
   }
 }

@@ -2,11 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   height: 210px;
-  outline: 1px solid red;
 }
 
 .product__description {
-  outline: 1px solid red;
   display: flex;
   flex-direction: column;
   width: 140px;
@@ -35,8 +33,23 @@
   text-align: right;
 }
 
-.product__link {
-  margin-bottom: 25px;
+
+
+@media (max-width: $mobile) {
+  .product__image {
+    margin-left: 20px;
+  }
+
+  .product__spec {
+    width: 140px;
+    margin-right: 20px;
+  }
+
+  .product__link {
+    margin-right: auto;
+    margin-bottom: 25px;
+    margin-left: auto;
+  }
 }
 
 @media (min-width: $tablet) {
