@@ -11,6 +11,7 @@
   justify-content: space-between;
   padding-top: 31px;
   padding-bottom: 26px;
+  position: relative;
 }
 
 .about-us__partnership {
@@ -49,5 +50,14 @@
   .about-us__city {
     display: block;
     margin-top: 15px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .about-us__wrapper {
+    width: 570px;
+    min-height: 201px;
+    align-items: center;
+    background-color: $white-1;
   }
 }

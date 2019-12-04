@@ -105,6 +105,8 @@
   }
 
   .additional-goods__link {
+    width: 280px;
+    height: 40px;
     margin-bottom: 17px;
   }
 
@@ -134,13 +136,14 @@
     background-color: $white-1;
 
     &::before {
-      content: "";
-      display: block;
       width: 768px;
-
       bottom: 10px;
       left: -30px;
     }
+  }
+
+  .additional-goods__list {
+    border: 1px solid #cdcdcd;
   }
 
   .additional-goods__item {
@@ -148,10 +151,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-end;
-    border: 1px solid #cdcdcd;
 
-    &:nth-of-type(n):not(:last-of-type) {
-      margin-bottom: -1px;
+    &:not(:last-child) {
+      border-bottom: 1px solid #cdcdcd;
     }
   }
 
@@ -162,14 +164,12 @@
     margin-top: 28px;
     margin-bottom: 25px;
     margin-left: 40px;
-    outline: 1px solid red;
   }
 
   .additional-goods__spec {
     margin-right: 38px;
     margin-bottom: 23px;
     margin-left: auto;
-    text-align: right;
   }
 
   .additional-goods__spec-value {
@@ -178,6 +178,7 @@
 
   .additional-goods__link {
     width: 633px;
+    height: 40px;
     margin-bottom: 28px;
     margin-left: 38px;
   }
@@ -201,6 +202,75 @@
     &::before {
       left: -330px;
       top: -10px;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .additional-goods__title {
+    &::before {
+      width: 1440px;
+      left: -110px;
+    }
+  }
+
+  .additional-goods__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .additional-goods__list {
+    border-right: none;
+    border-left: none;
+  }
+
+  .additional-goods__item {
+    align-items: center;
+    width: 895px;
+  }
+
+  .additional-goods__product-name {
+    margin-left: 0;
+  }
+
+  .additional-goods__spec {
+    width: 300px;
+    margin-bottom: 0;
+  }
+
+  .additional-goods__spec-row {
+    width: 200px;
+  }
+
+  .additional-goods__spec-value {
+    text-align: left;
+    width: 50px;
+  }
+
+  .additional-goods__link {
+    width: 245px;
+    margin: 0;
+  }
+
+  .additional-goods__promo-wrapper {
+    width: 245px;
+    min-height: 289px;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+  }
+
+  .additional-goods__promo {
+    margin: 0;
+    margin-bottom: 40px;
+    text-align: center;
+
+    &::before {
+      top: auto;
+      bottom: 125px;
+      left: calc((160px - 56px) / 2);
     }
   }
 }

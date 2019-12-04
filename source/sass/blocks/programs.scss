@@ -146,5 +146,63 @@
     font-size: 20px;
     margin-top: 60px;
     margin-left: 30px;
+    width: 160px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .programs__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .programs__item {
+    width: 570px;
+    min-height: 372px;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .programs__title {
+    margin-top: 0;
+    margin-bottom: 45px;
+    margin-left: 60px;
+
+    &::before {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin-left: 50px;
+    }
+  }
+
+  .programs__title--reduce {
+    &::after {
+      width: 71px;
+      height: 97px;
+      top: auto;
+      left: 20px;
+    }
+  }
+
+  .programs__title--gain {
+    &::after {
+      width: 134px;
+      height: 57px;
+      top: auto;
+      left: -20px;
+    }
+  }
+
+  .programs__description {
+    margin-left: 50px;
+    width: 460px;
+  }
+
+  .programs__link {
+    margin-top: 35px;
+    margin-left: 50px;
   }
 }

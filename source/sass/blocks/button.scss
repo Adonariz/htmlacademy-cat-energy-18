@@ -2,8 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 280px;
-  height: 40px;
 
   @include oswald (16px, 1.25, 400);
   color: $white-1;
@@ -18,10 +16,4 @@
 .button--gray {
   color: $greyish-brown;
   background-color: $light-grey;
-}
-
-@media (min-width: $tablet) {
-  .button {
-    width: 249px;
-  }
 }

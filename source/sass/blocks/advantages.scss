@@ -111,3 +111,13 @@
     }
   }
 }
+
+@media (min-width: $desktop) {
+  .advantages__list {
+    justify-content: space-between;
+  }
+
+  .advantages__item {
+    margin: 0;
+  }
+}

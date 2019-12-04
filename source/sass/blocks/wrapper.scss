@@ -21,3 +21,10 @@
     padding: 0 30px;
   }
 }
+
+@media (min-width: $desktop) {
+  .wrapper {
+    width: 1220px;
+    padding: 0 110px;
+  }
+}

@@ -61,7 +61,7 @@
 @media (min-width: $tablet) {
   .main-nav {
     @include oswald (18px, 1.39, 400);
-    margin-top: 24px;
+    padding-top: 24px;
     align-items: center;
   }
 
@@ -84,10 +84,31 @@
 
   .main-nav__link {
     padding: 10px 0;
+
+    &--active {
+      border-bottom: 2px solid $leaf;
+      margin-bottom: -2px;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .main-nav {
+    padding-top: 70px;
+    position: relative;
+    z-index: 1;
   }
 
-  .main-nav__link--active {
-    border-bottom: 2px solid $leaf;
-    margin-bottom: -2px;
+  .main-nav__link {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .main-nav--desktop .main-nav__link {
+    color: $white-1;
+
+    &--active {
+      border-color: $white-1;
+    }
   }
 }
