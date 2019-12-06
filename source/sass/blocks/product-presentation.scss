@@ -3,7 +3,7 @@
 }
 
 .product-presentation__title {
-  @include oswald-regular (36px, 1.67);
+  @include oswald (36px, 1.67, 400);
 }
 
 .product-presentation__description {
@@ -18,18 +18,18 @@
 }
 
 .product-presentation__definition {
-  @include oswald-regular (24px, 1);
+  @include oswald (24px, 1, 400);
   text-transform: uppercase;
   margin: 0;
 }
 
 .product-presentation__costs {
-  @include oswald-regular (14px, 1.43);
+  @include oswald (14px, 1.43, 400);
   text-transform: uppercase;
   text-align: center;
 }
 
 .product-presentation__label {
-  @include oswald-regular (16px, 1.25);
+  @include oswald (16px, 1.25, 400);
   text-transform: uppercase;
 }

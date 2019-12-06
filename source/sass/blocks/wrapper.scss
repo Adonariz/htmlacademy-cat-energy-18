@@ -1,5 +1,30 @@
 .wrapper {
   margin: 0 auto;
-  width: 280px;
-  padding: 0 20px;
+  outline: 1px solid red;
+}
+
+@media (max-width: $mobile) {
+  .wrapper {
+    width: 280px;
+    padding: 0 20px;
+  }
+
+  .wrapper--no-padding {
+    width: 320px;
+    padding: 0;
+  }
+}
+
+@media (min-width: $tablet) {
+  .wrapper {
+    width: 708px;
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .wrapper {
+    width: 1220px;
+    padding: 0 110px;
+  }
 }

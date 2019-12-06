@@ -8,12 +8,14 @@
 
 .about-us__wrapper {
   display: flex;
+  justify-content: space-between;
   padding-top: 31px;
   padding-bottom: 26px;
+  position: relative;
 }
 
 .about-us__partnership {
-  @include oswald-regular (16px, 1.25);
+  @include oswald (16px, 1.25, 400);
   text-transform: uppercase;
   margin: 0;
   margin-right: 19px;
@@ -29,4 +31,33 @@
 .about-us__map-img {
   display: block;
   margin: 0 auto;
+}
+
+@media (min-width: $tablet) {
+  .about-us__partnership {
+    font-size: 20px;
+    line-height: 1.25;
+    width: 150px;
+  }
+
+  .about-us__adress {
+    font-size: 16px;
+    line-height: 1.25;
+    width: 150px;
+    text-align: right;
+  }
+
+  .about-us__city {
+    display: block;
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .about-us__wrapper {
+    width: 570px;
+    min-height: 201px;
+    align-items: center;
+    background-color: $white-1;
+  }
 }

@@ -1,29 +1,112 @@
 .intro {
-  @include oswald-regular (14px, 1);
-  color: $white-1;
-
   display: flex;
-
-  background-image: url("/img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  object-fit: fill;
-  text-align: center;
 }
 
 .intro__title {
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: inherit;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
   margin: 0;
-  margin-top: 29px;
 }
 
 .intro__slogan {
-  margin-top: 19px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
 .intro__img {
   margin-top: 20px;
+}
+
+@media (max-width: $mobile) {
+  .intro {
+    text-align: center;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+  }
+
+  .intro__title {
+    margin-top: 29px;
+    font-size: 36px;
+    line-height: 1;
+    color: $white-1;
+  }
+
+  .intro__slogan {
+    margin-top: 19px;
+    font-size: 14px;
+    line-height: 1;
+    color: $white-1;
+  }
+
+  .intro__button {
+    width: 280px;
+    height: 40px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .intro__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 806px;
+  }
+
+  .intro__title {
+    width: 415px;
+    margin-top: 80px;
+    margin-left: 90px;
+    font-size: 60px;
+    line-height: 1;
+  }
+
+  .intro__slogan {
+    margin-top: 30px;
+    margin-left: 90px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .intro__img {
+    order: 1;
+  }
+
+  .intro__button {
+    width: 245px;
+    height: 52px;
+
+    margin-top: 10px;
+    margin-left: 90px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .intro {
+    margin-top: -134px;
+    position: relative;
+  }
+
+  .intro__wrapper {
+    min-height: 696px;
+
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+  }
+
+  .intro__title {
+    margin-top: 230px;
+  }
+
+  .intro__img {
+    position: absolute;
+    right: 30%;
+    top: 130px;
+  }
+
+  .intro__button {
+    margin-top: 50px;
+  }
 }

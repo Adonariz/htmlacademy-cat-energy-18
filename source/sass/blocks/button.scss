@@ -2,10 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 280px;
-  height: 40px;
 
-  @include oswald-regular (16px, 1.25);
+  @include oswald (16px, 1.25, 400);
   color: $white-1;
   text-transform: uppercase;
   border: none;
