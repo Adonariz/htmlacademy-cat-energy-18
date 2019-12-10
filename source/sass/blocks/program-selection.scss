@@ -1,15 +1,20 @@
+.program-selection {
+  min-height: 1357px;
+}
+
 .program-selection__title {
-  @include oswald-regular (36px, 1.67);
+  @include oswald (36px, 1.67, 400);
+  margin: 0;
 }
 
 .program-selection__suggest {
-  @include oswald-regular (14px, 1.29);
+  @include oswald (14px, 1.29, 400);
   text-transform: uppercase;
   margin-bottom: 40px;
 }
 
-.selection-form__label {
-  @include oswald-regular (16px, 1.13);
+.program-selection__label {
+  @include oswald (16px, 1.13, 400);
   color: $black-2;
   text-transform: uppercase;
 
@@ -19,14 +24,14 @@
   margin-bottom: 14px;
 }
 
-.selection-form__legend {
-  @include oswald-regular (24px, 1);
+.program-selection__legend {
+  @include oswald (24px, 1, 400);
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-.selection-form__input {
-  @include oswald-regular (16px, 1.13);
+.program-selection__input {
+  @include oswald (16px, 1.13, 400);
   color: $greyish-brown;
   text-transform: uppercase;
 
@@ -37,48 +42,54 @@
   border: 1px solid rgba(#cdcdcd, 0.5);
 }
 
-.selection-form__cat-data {
+.program-selection__cat-data {
   @include fieldset-reset;
   display: flex;
   flex-direction: column;
 }
 
-.selection-form__program-select {
+.program-selection__program-select {
   @include fieldset-reset;
   display: flex;
   flex-direction: column;
 }
 
-.selection-form__owner-contacts {
+.program-selection__owner-contacts {
   @include fieldset-reset;
   display: flex;
   flex-direction: column;
 }
 
-.selection-form__comment {
+.program-selection__comment {
   @include fieldset-reset;
 }
 
-.selection-form__comment-area {
-  @include oswald-regular (16px, 1.13);
+.program-selection__comment-area {
+  @include oswald (16px, 1.13, 400);
   color: $greyish-brown;
   text-transform: uppercase;
 
   display: flex;
   min-height: 150px;
-  min-width: 280px;
-  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px;
 
   border: 1px solid rgba(#cdcdcd, 0.5);
   resize: none;
   overflow: auto;
 }
 
-.selection-form__additional-goods {
+.program-selection__additional-goods {
   @include fieldset-reset;
 }
 
-.selection-form__asterisk {
+.program-selection__submit {
+  width: 280px;
+  height: 40px;
+}
+
+.program-selection__asterisk {
   display: block;
   text-align: center;
   line-height: 1.14;
