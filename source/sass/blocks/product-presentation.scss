@@ -1,13 +1,26 @@
 .product-presentation {
+  display: flex;
   background-color: $light-grey;
 }
 
 .product-presentation__title {
   @include oswald (36px, 1.67, 400);
+
+  margin: 0;
+  margin-bottom: 33px;
+  padding-top: 33px;
 }
 
 .product-presentation__description {
   color: $greyish-brown;
+}
+
+.product-presentation__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  position: relative;
 }
 
 .product-presentation__term {
@@ -15,21 +28,145 @@
   line-height: 1;
   color: $greyish-brown;
   text-transform: lowercase;
+  text-align: center;
+
+  display: block;
+  width: 82px;
+  background-color: $light-grey;
+
+  position: absolute;
+  z-index: 1;
+
+  &--weight {
+    bottom: -15px;
+    left: 22px;
+  }
+
+  &--time {
+    right: 22px;
+    bottom: -15px;
+  }
 }
 
 .product-presentation__definition {
   @include oswald (24px, 1, 400);
   text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   margin: 0;
+
+  width: 124px;
+  height: 56px;
+
+  position: relative;
+
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
 }
 
 .product-presentation__costs {
   @include oswald (14px, 1.43, 400);
   text-transform: uppercase;
   text-align: center;
+
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 45px;
+}
+
+.product-presentation__photo {
+  margin-left: -10px;
+  margin-bottom: 35px;
+
+  &--before {
+    display: block;
+  }
+  &--after {
+    display: none;
+  }
+}
+
+.product-presentation__slider-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 40px;
+
+  outline: 1px solid red;
 }
 
 .product-presentation__label {
   @include oswald (16px, 1.25, 400);
   text-transform: uppercase;
+
+  &--before {
+    margin-left: 40px;
+  }
+
+  &--after {
+    margin-right: 30px;
+  }
+}
+
+.product-presentation__slider-scale {
+  width: 84px;
+  height: 14px;
+
+  margin-right: 10px;
+
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+
+  background-color: $white-1;
+}
+
+@media (min-width: $tablet) {
+  .product-presentation {
+    background: none;
+    border-top: 1px solid #cdcdcd;
+  }
+
+  .product-presentation__title {
+    font-size: 60px;
+    line-height: 1;
+
+    margin-top: 50px;
+    margin-bottom: 60px;
+  }
+
+  .product-presentation__description {
+    font-size: 16px;
+    line-height: 1.5;
+
+    margin-bottom: 56px;
+  }
+
+  .product-presentation__list {
+    justify-content: flex-start;
+    outline: 1px solid red;
+    width: calc(708px / 2);
+  }
+
+  .product-presentation__term {
+    font-size: 14px;
+    background-color: $white-1;
+  }
+
+  .product-presentation__definition {
+    font-size: 30px;
+    line-height: 1.23;
+
+    margin-right: 42px;
+  }
+
+  .product-presentation__costs {
+    font-size: 20px;
+    line-height: 1;
+    display: flex;
+    outline: 1px solid red;
+  }
 }
