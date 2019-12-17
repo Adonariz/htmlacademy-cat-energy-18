@@ -1,4 +1,5 @@
 .main-nav {
+  @include oswald (20px, 1, 500);
   text-transform: uppercase;
   display: flex;
   flex-wrap: wrap;
@@ -32,30 +33,18 @@
 
 .main-nav__item {
   display: flex;
+  width: 100%;
+  border-top: 1px solid $light-grey;
+
+  &:last-of-type {
+    border-bottom: 1px solid $light-grey;
+  }
 }
 
 .main-nav__link {
+  width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-@media (max-width: $mobile) {
-  .main-nav {
-    @include oswald (20px, 1, 500);
-  }
-
-  .main-nav__item {
-    width: 100%;
-    border-top: 1px solid $light-grey;
-
-    &:last-of-type {
-      border-bottom: 1px solid $light-grey;
-    }
-  }
-
-  .main-nav__link {
-    width: 100%;
-  }
 }
 
 @media (min-width: $tablet) {
@@ -75,7 +64,13 @@
   }
 
   .main-nav__item {
+    width: auto;
     align-items: center;
+    border: none;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
 
     &:not(:first-of-type) {
       margin-left: 38px;
@@ -83,6 +78,7 @@
   }
 
   .main-nav__link {
+    width: auto;
     padding: 10px 0;
 
     &--active {

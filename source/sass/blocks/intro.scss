@@ -1,52 +1,40 @@
 .intro {
   display: flex;
+  text-align: center;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
 }
 
 .intro__title {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-weight: 400;
+  @include oswald (36px, 1, 400);
+  color: $white-1;
   margin: 0;
+  margin-top: 29px;
 }
 
 .intro__slogan {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-weight: 400;
+  @include oswald (14px, 1, 400);
+  color: $white-1;
   text-transform: uppercase;
+  margin-top: 19px;
+}
+
+.intro__button {
+  width: 280px;
+  height: 40px;
 }
 
 .intro__img {
   margin-top: 20px;
 }
 
-@media (max-width: $mobile) {
-  .intro {
-    text-align: center;
-    background-image: url("../img/index-background-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-  }
-
-  .intro__title {
-    margin-top: 29px;
-    font-size: 36px;
-    line-height: 1;
-    color: $white-1;
-  }
-
-  .intro__slogan {
-    margin-top: 19px;
-    font-size: 14px;
-    line-height: 1;
-    color: $white-1;
-  }
-
-  .intro__button {
-    width: 280px;
-    height: 40px;
-  }
-}
-
 @media (min-width: $tablet) {
+  .intro {
+    background-image: none;
+    text-align: left;
+  }
+
   .intro__wrapper {
     display: flex;
     flex-direction: column;
@@ -57,15 +45,17 @@
     width: 415px;
     margin-top: 80px;
     margin-left: 90px;
+
     font-size: 60px;
-    line-height: 1;
+    color: $black-1;
   }
 
   .intro__slogan {
     margin-top: 30px;
     margin-left: 90px;
+
     font-size: 20px;
-    line-height: 1;
+    color: $black-1;
   }
 
   .intro__img {
