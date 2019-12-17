@@ -1,4 +1,9 @@
 .catalog__wrapper {
+  width: 320px;
+  padding: 0;
+}
+
+.catalog__item-wrapper {
   display: flex;
   flex-direction: column;
 }
@@ -6,6 +11,14 @@
 .catalog__page-title {
   @include oswald (36px, 1.67, 400);
   margin: 0;
+  margin-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.catalog__item {
+  border: 1px solid #ededed;
+  margin-bottom: -1px;
 }
 
 .catalog__more {
@@ -13,20 +26,31 @@
   flex-direction: column;
   min-height: 210px;
   align-items: center;
+
+  border: 1px solid #ededed;
 }
 
 .catalog__show-more {
   @include oswald (16px, 1.25, 400);
   text-transform: uppercase;
   color: $black-1;
+
   margin: 0;
   margin-top: auto;
+  margin-bottom: 10px;
 
   &::before {
     content: "";
     display: block;
+    width: 31px;
+    height: 31px;
+
     margin-right: auto;
+    margin-bottom: 25px;
     margin-left: auto;
+
+    background-image: url("../img/icon-plus-mobile.svg");
+    opacity: 0.2;
   }
 }
 
@@ -34,56 +58,23 @@
   font-size: 12px;
   line-height: 1.33;
   color: $greyish-brown;
-  margin: 0;
-}
 
-.catalog__link {
+  margin: 0;
   margin-bottom: 20px;
 }
 
-@media (max-width: $mobile) {
-  .catalog__page-title {
-    margin-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-  }
-
-  .catalog__item {
-    border-top: 1px solid rgba(#000000, 0.1);
-
-    &:last-of-type {
-      border-bottom: 1px solid rgba(#000000, 0.1);
-    }
-  }
-
-  .catalog__more {
-    border-bottom: 1px solid rgba(#000000, 0.1);
-  }
-
-  .catalog__show-more {
-    margin-bottom: 10px;
-
-    &::before {
-      width: 31px;
-      height: 31px;
-      margin-bottom: 25px;
-
-      background-image: url("../img/icon-plus-mobile.svg");
-      opacity: 0.2;
-    }
-  }
-
-  .catalog__promo {
-    margin-bottom: 20px;
-  }
-
-  .catalog__link {
-    width: 280px;
-    height: 40px;
-  }
+.catalog__link {
+  width: 280px;
+  height: 40px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: $tablet) {
+  .catalog__wrapper {
+    width: 708px;
+    padding: 0 30px;
+  }
+
   .catalog__page-title {
     font-size: 60px;
     line-height: 1;
@@ -92,7 +83,7 @@
     margin-bottom: 0;
   }
 
-  .catalog__wrapper {
+  .catalog__item-wrapper {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -103,7 +94,6 @@
     min-height: 432px;
     margin-top: 140px;
     text-align: center;
-    outline: 1px solid rgba(#cdcdcd, 0.5);
   }
 
   .catalog__show-more {
@@ -137,6 +127,11 @@
 }
 
 @media (min-width: $desktop) {
+  .catalog__wrapper {
+    width: 1220px;
+    padding: 0 110px;
+  }
+
   .catalog__link {
     width: 169px;
   }
