@@ -32,6 +32,7 @@
 
   display: block;
   width: 82px;
+  height: 20px;
   background-color: $light-grey;
 
   position: absolute;
@@ -95,8 +96,6 @@
   align-items: center;
 
   margin-bottom: 40px;
-
-  outline: 1px solid red;
 }
 
 .product-presentation__label {
@@ -112,17 +111,32 @@
   }
 }
 
-.product-presentation__slider-scale {
+.product-presentation__slider-btn {
   width: 84px;
   height: 14px;
-
-  margin-right: 10px;
+  position: relative;
 
   border: 1px solid #cdcdcd;
   border-radius: 6px;
 
   background-color: $white-1;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 6px;
+
+    position: absolute;
+    top: calc((14px - 6px) / 2);
+    left: 5px;
+
+    border-radius: 3px;
+    background-color: $leaf;
+  }
 }
+
+// Планшетные стили
 
 @media (min-width: $tablet) {
   .product-presentation {
@@ -145,28 +159,145 @@
     margin-bottom: 56px;
   }
 
-  .product-presentation__list {
-    justify-content: flex-start;
-    outline: 1px solid red;
-    width: calc(708px / 2);
+  .product-presentation__stats-wrapper {
+    display: flex;
+    align-items: center;
   }
 
   .product-presentation__term {
+    width: 130px;
+    height: 27px;
     font-size: 14px;
     background-color: $white-1;
+
+    &--weight {
+      bottom: -18px;
+      left: 18px;
+    }
+
+    &--time {
+      bottom: -18px;
+      right: 18px;
+    }
   }
 
   .product-presentation__definition {
     font-size: 30px;
     line-height: 1.23;
 
-    margin-right: 42px;
+    width: 162px;
+    height: 72px;
+
+    &:first-of-type {
+      margin-right: 42px;
+    }
   }
 
   .product-presentation__costs {
     font-size: 20px;
-    line-height: 1;
+    line-height: 1.5;
+    text-align: right;
+
+    width: 175px;
+    margin-left: auto;
+  }
+
+  .product-presentation__slider-wrapper {
+    position: relative;
+  }
+
+  .product-presentation__label {
+    font-size: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted rgba(#000000, 0.23);
+  }
+
+  .product-presentation__slider-scale {
+    width: 428px;
+    height: 6px;
+
+    border-radius: 2.5px;
+    background-color: #dcdcdc;
+  }
+
+  .product-presentation__slider-btn {
+    width: 34px;
+    height: 34px;
+
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+
+    position: absolute;
+
+    left: 50%;
+    z-index: 1;
+
+    &::before {
+      width: 8px;
+      height: 8px;
+
+      top: calc((34px - 8px) / 2);
+      left: calc((34px - 8px) / 2);
+
+      border-radius: 50%;
+      background-color: $leaf;
+    }
+  }
+}
+
+// Десктопные стили
+
+@media (min-width: $desktop) {
+  .product-presentation {
+    border-top: none;
+    background-color: $light-grey;
+  }
+
+  .product-presentation__title {
+    margin-top: -170px;
+    margin-bottom: 150px;
+  }
+
+  .product-presentation__container {
     display: flex;
-    outline: 1px solid red;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .product-presentation__description {
+    width: 435px;
+  }
+
+  .product-presentation__stats-wrapper {
+    width: 430px;
+    flex-wrap: wrap;
+  }
+
+  .product-presentation__term {
+    background-color: $light-grey;
+  }
+
+  .product-presentation__costs {
+    display: flex;
+    width: 320px;
+
+    text-align: left;
+
+    margin: 0;
+    margin-top: 60px;
+    margin-bottom: 75px;
+  }
+
+  .product-presentation__amount {
+    margin-left: auto;
+  }
+
+  .product-presentation__before-after {
+    width: 650px;
+    margin-top: auto;
+  }
+
+  .product-presentation__slider-wrapper {
+    margin-bottom: 70px;
   }
 }
