@@ -355,7 +355,7 @@
   // Кастомные радио чекбоксы
 
   .program-selection__label--radio {
-   &::before {
+    &::before {
       width: 40px;
       height: 40px;
 
@@ -450,6 +450,15 @@
     margin-bottom: 0;
   }
 
+  .program-selection__legend {
+    // Декоративная полоска
+    &::after {
+      width: 1440px;
+      top: 50%;
+      left: -80px;
+    }
+  }
+
   // Данные кота и выбор программы
 
   .program-selection__profile {
@@ -472,4 +481,37 @@
   }
 
   // Контактные данные
+
+  .program-selection__owner-contacts-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .program-selection__owner-contacts-item {
+    width: 500px;
+
+    &:first-of-type {
+      width: 570px;
+    }
+  }
+
+  // Дополнительно
+
+  .program-selection__additional-goods-list {
+    width: 100%;
+  }
+
+  // Кнопка и сноска
+
+  .program-selection__submit {
+    width: 568px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+
+  .program-selection__asterisk {
+    margin-top: 80px;
+  }
 }
