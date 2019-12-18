@@ -34,41 +34,57 @@
       <section class="program-selection">
         <div class="wrapper">
           <h1 class="program-selection__title">Подбор программы</h1>
-          <p class="program-selection__suggest">Заполните анкету и мы подберем программу питания для вашего кота</p>
 
           <form class="program-selection__form" action="https://echo.htmlacademy.ru" method="POST" >
-
-            <fieldset class="program-selection__cat-data">
-              <label class="program-selection__label" for="cat-name">Имя:*
-                <input class="program-selection__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
-              </label>
-              <label class="program-selection__label" for="cat-weight">Вес (кг):*
-                <input class="program-selection__input" type="text" name="cat-weight" id="cat-weight" placeholder="7">
-              </label>
-              <label class="program-selection__label" for="cat-age">Возраст&nbsp;(лет):*
-                <input class="program-selection__input" type="text" name="cat-age" id="cat-age" placeholder="7">
-              </label>
-            </fieldset>
-
-            <fieldset class="program-selection__program-select">
-              <div class="program-selection__input-container program-selection__input-container--radio">
-                <input class="program-selection__input visually-hidden" type="radio" name="program-select" id="select-reduce" value="reduce">
-                <label class="program-selection__label program-selection__label--radio" for="select-reduce">Похудение</label>
-                <input class="program-selection__input visually-hidden" type="radio" name="program-select" id="select-gain" value="gain">
-                <label class="program-selection__label program-selection__label--radio" for="select-gain">Набор массы</label>
-                <input class="program-selection__input visually-hidden" type="radio" name="program-select" id="select-idk" value="idk">
-                <label class="program-selection__label program-selection__label--radio" for="select-idk">Не знаю (нужен ваш совет)</label>
-              </div>
-            </fieldset>
+            <p class="program-selection__suggest">Заполните анкету и мы подберем программу питания для вашего кота</p>
+            <div class="program-selection__profile">
+              <ul class="program-selection__cat-data-list">
+                <li class="program-selection__cat-data-item">
+                  <label class="program-selection__label" for="cat-name">Имя:*
+                    <input class="program-selection__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
+                  </label>
+                </li>
+                <li class="program-selection__cat-data-item">
+                  <label class="program-selection__label" for="cat-weight">Вес (кг):*
+                    <input class="program-selection__input" type="text" name="cat-weight" id="cat-weight" placeholder="7">
+                  </label>
+                </li>
+                <li class="program-selection__cat-data-item">
+                  <label class="program-selection__label" for="cat-age">Возраст&nbsp;(лет):*
+                    <input class="program-selection__input" type="text" name="cat-age" id="cat-age" placeholder="7">
+                  </label>
+                </li>
+              </ul>
+              <ul class="program-selection__program-select-list">
+                <li class="program-selection__program-select-item">
+                  <input class="program-selection__input visually-hidden" type="radio" name="program-select" id="select-reduce" value="reduce">
+                  <label class="program-selection__label program-selection__label--radio" for="select-reduce">Похудение</label>
+                </li>
+                <li class="program-selection__program-select-item">
+                  <input class="program-selection__input visually-hidden" type="radio" name="program-select" id="select-gain" value="gain">
+                  <label class="program-selection__label program-selection__label--radio" for="select-gain">Набор массы</label>
+                </li>
+                <li class="program-selection__program-select-item">
+                  <input class="program-selection__input visually-hidden" type="radio" name="program-select" id="select-idk" value="idk">
+                  <label class="program-selection__label program-selection__label--radio" for="select-idk">Не знаю (нужен ваш совет)</label>
+                </li>
+              </ul>
+            </div>
 
             <fieldset class="program-selection__owner-contacts">
               <legend class="program-selection__legend">Контактные данные (владельца кота)</legend>
-              <label class="program-selection__label program-selection__label--email" for="email">E-mail:*
-                <input class="program-selection__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
-              </label>
-              <label class="program-selection__label program-selection__label--phone" for="phone">Телефон:*
-                <input class="program-selection__input" type="text" name="phone" id="phone" placeholder="8 (960) 900-60-90">
-              </label>
+              <ul class="program-selection__owner-contacts-list">
+                <li class="program-selection__owner-contacts-item">
+                  <label class="program-selection__label program-selection__label--email" for="email">E-mail:*
+                    <input class="program-selection__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
+                  </label>
+                </li>
+                <li class="program-selection__owner-contacts-item">
+                  <label class="program-selection__label program-selection__label--phone" for="phone">Телефон:*
+                    <input class="program-selection__input" type="text" name="phone" id="phone" placeholder="8 (960) 900-60-90">
+                  </label>
+                </li>
+              </ul>
             </fieldset>
 
             <fieldset class="program-selection__comment">
@@ -78,16 +94,24 @@
 
             <fieldset class="program-selection__additional-goods">
               <legend class="program-selection__legend">Дополнительно</legend>
-              <div class="program-selection__input-container program-selection__input-container--checkbox">
-                <input class="program-selection__input visually-hidden" type="checkbox" name="select-sugar" id="select-sugar" checked>
-                <label class="program-selection__label program-selection__label--checkbox" for="select-sugar">Сахарозаменитель</label>
-                <input class="program-selection__input visually-hidden" type="checkbox" name="select-water" id="select-water">
-                <label class="program-selection__label program-selection__label--checkbox" for="select-water">Питьевая вода</label>
-                <input class="program-selection__input visually-hidden" type="checkbox" name="select-milk" id="select-milk">
-                <label class="program-selection__label program-selection__label--checkbox" for="select-milk">Молоко</label>
-                <input class="program-selection__input visually-hidden" type="checkbox" name="select-vitamins" id="select-vitamins">
-                <label class="program-selection__label program-selection__label--checkbox" for="select-vitamins">Витамины</label>
-              </div>
+              <ul class="program-selection__additional-goods-list">
+                <li class="program-selection__additional-goods-item">
+                  <input class="program-selection__input visually-hidden" type="checkbox" name="select-sugar" id="select-sugar" checked>
+                  <label class="program-selection__label program-selection__label--checkbox" for="select-sugar">Сахарозаменитель</label>
+                </li>
+                <li class="program-selection__additional-goods-item">
+                  <input class="program-selection__input visually-hidden" type="checkbox" name="select-water" id="select-water">
+                  <label class="program-selection__label program-selection__label--checkbox" for="select-water">Питьевая вода</label>
+                </li>
+                <li class="program-selection__additional-goods-item">
+                  <input class="program-selection__input visually-hidden" type="checkbox" name="select-milk" id="select-milk">
+                  <label class="program-selection__label program-selection__label--checkbox" for="select-milk">Молоко</label>
+                </li>
+                <li class="program-selection__additional-goods-item">
+                  <input class="program-selection__input visually-hidden" type="checkbox" name="select-vitamins" id="select-vitamins">
+                  <label class="program-selection__label program-selection__label--checkbox" for="select-vitamins">Витамины</label>
+                </li>
+              </ul>
             </fieldset>
 
             <button class="program-selection__submit button button--green" type="submit">Отправить заявку</button>
@@ -101,7 +125,7 @@
         <h2 class="visually-hidden">Адрес магазина</h2>
         <div class="wrapper about-us__wrapper">
           <p class="about-us__partnership">Приглашаем к&nbsp;сотрудничеству дилеров!</pa>
-          <p class="about-us__adress">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 Санкт-Петербург</p>
+          <p class="about-us__adress">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 <span class="about-us__city">Санкт-Петербург</span></p>
         </div>
         <div class="about-us__map">
           <img class="about-us__map-img" src="img/bg-map-mobile@1x.png" alt="Адрес магазина на карте" width="320" height="400">
