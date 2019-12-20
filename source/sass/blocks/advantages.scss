@@ -33,18 +33,38 @@
 
   &--healthy::before {
     background-image: url("../img/advantage-leaf@1x.png");
+    background-size: contain;
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
   }
 
   &--easy::before {
     background-image: url("../img/advantage-powder@1x.png");
+    background-size: contain;
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
   }
 
   &--food::before {
     background-image: url("../img/advantage-dining@1x.png");
+    background-size: contain;
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
   }
 
   &--time::before {
     background-image: url("../img/advantage-clock@1x.png");
+    background-size: contain;
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
   }
 }
 
