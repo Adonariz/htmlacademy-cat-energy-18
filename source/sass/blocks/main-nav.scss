@@ -54,6 +54,11 @@
     align-items: center;
   }
 
+  .main-nav__logo-img {
+    width: 174px;
+    height: 59px;
+  }
+
   .main-nav__menu-button {
     display: none;
   }
@@ -93,6 +98,11 @@
     padding-top: 70px;
     position: relative;
     z-index: 1;
+  }
+
+  .main-nav__logo-img {
+    width: 203px;
+    height: 60px;
   }
 
   .main-nav__link {
