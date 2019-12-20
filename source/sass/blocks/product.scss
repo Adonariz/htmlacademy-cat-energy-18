@@ -58,6 +58,27 @@
     background-color: $light-grey;
   }
 
+  .product__image {
+    &--small {
+      width: 245px;
+      height: 172px;
+
+      object-fit: contain;
+
+      margin-top: -57px;
+      margin-left: 0;
+    }
+
+    &--big {
+      width: 245px;
+      height: 208px;
+      object-fit: contain;
+
+      margin-top: -90px;
+      margin-left: 0;
+    }
+  }
+
   .product__description {
     width: 249px;
     margin-top: auto;

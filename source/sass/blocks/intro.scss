@@ -3,7 +3,12 @@
   text-align: center;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: 320px 305px;
   background-position: 50% 0;
+
+  @media (min-resolution: $retina) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .intro__title {
@@ -59,6 +64,9 @@
   }
 
   .intro__img {
+    width: 709px;
+    height: 609px;
+
     order: 1;
   }
 
@@ -74,16 +82,21 @@
 @media (min-width: $desktop) {
   .intro {
     margin-top: -134px;
-    position: relative;
   }
 
   .intro__wrapper {
     min-height: 696px;
 
+    position: relative;
+
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: right;
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 
   .intro__title {
@@ -91,9 +104,14 @@
   }
 
   .intro__img {
+    width: 552px;
+    height: 499px;
+
+    margin: 0;
+
     position: absolute;
-    right: 30%;
-    top: 130px;
+    right: 325px;
+    top: 150px;
   }
 
   .intro__button {
