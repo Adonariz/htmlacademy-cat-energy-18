@@ -3,9 +3,11 @@
   align-items: center;
   justify-content: center;
 
-  @include oswald (16px, 1.25, 400);
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
   color: $white-1;
   text-transform: uppercase;
+
   border: none;
 }
 

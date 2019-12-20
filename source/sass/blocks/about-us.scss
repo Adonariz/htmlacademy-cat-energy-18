@@ -34,17 +34,30 @@
 }
 
 @media (min-width: $tablet) {
+  .about-us__wrapper {
+    min-height: 201px;
+    align-items: center;
+  }
+
   .about-us__partnership {
     font-size: 20px;
     line-height: 1.25;
+
     width: 150px;
+
+    margin: 0;
+    margin-left: 35px;
   }
 
   .about-us__adress {
     font-size: 16px;
     line-height: 1.25;
-    width: 150px;
     text-align: right;
+
+    width: 150px;
+
+    margin: 0;
+    margin-right: 35px;
   }
 
   .about-us__city {
@@ -56,8 +69,6 @@
 @media (min-width: $desktop) {
   .about-us__wrapper {
     width: 570px;
-    min-height: 201px;
-    align-items: center;
     background-color: $white-1;
   }
 }
