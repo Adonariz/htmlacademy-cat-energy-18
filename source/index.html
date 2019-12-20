@@ -9,7 +9,7 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="wrapper wrapper--no-padding">
+      <div class="page-header__wrapper">
         <nav class="main-nav main-nav--desktop">
           <a class="main-nav__logo">
             <img class="main-nav__logo-img" src="img/logo-mobile.svg" alt="Логотип" width="191" height="39">
@@ -75,25 +75,33 @@
       <section class="product-presentation">
         <div class="wrapper">
           <h2 class="product-presentation__title">Живой пример</h2>
-          <p class="product-presentation__description">
-            Борис сбросил 5 кг за 2 месяца, просто заменив
-            свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
-            При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-          </p>
-          <dl class="product-presentation__list">
-            <dt class="product-presentation__term">Снижение веса</dt>
-              <dd class="product-presentation__definition">5 кг</dd>
-            <dt class="product-presentation__term">Затрачено времени</dt>
-              <dd class="product-presentation__definition">60 дней</dd>
-          </dl>
-          <p class="product-presentation__costs">Затраты на питание: 15 000 руб.</p>
-          <img class="product-presentation__photo product-presentation__photo--before" src="img/before-mobile@1x.png" alt="Фото до" width="311" height="232">
-          <img class="product-presentation__photo product-presentation__photo--after" src="img/after-mobile@1x.png" alt="Фото после" width="311" height="232">
-          <div class="product-presentation__slider-wrapper">
-            <span class="product-presentation__label">Было</span>
-            <div class="product-presentation__slider-btn"></div>
-            <div class="product-presentation__slider-scale"></div>
-            <span class="product-presentation__label">Стало</span>
+          <div class="product-presentation__container">
+            <div class="product-presentation__text-container">
+              <p class="product-presentation__description">
+                Борис сбросил 5 кг за 2 месяца, просто заменив
+                свой обычный корм на Cat Energy&nbsp;Slim. Отличный результат без изнуряющих тренировок!
+                При этом он не менял своих привычек и по&#8209;прежнему спит по 16 часов в день.
+              </p>
+              <div class="product-presentation__stats-wrapper">
+                <dl class="product-presentation__list">
+                  <dt class="product-presentation__term product-presentation__term--weight">Снижение веса</dt>
+                    <dd class="product-presentation__definition">5 кг</dd>
+                  <dt class="product-presentation__term product-presentation__term--time">Затрачено времени</dt>
+                    <dd class="product-presentation__definition">60 дней</dd>
+                </dl>
+                <p class="product-presentation__costs">Затраты на питание: <span class="product-presentation__amount">15 000 руб.</span></p>
+              </div>
+            </div>
+            <div class="product-presentation__before-after">
+              <img class="product-presentation__photo product-presentation__photo--before" src="img/before-mobile@1x.png" alt="Фото до" width="311" height="232">
+              <img class="product-presentation__photo product-presentation__photo--after" src="img/after-mobile@1x.png" alt="Фото после" width="311" height="232">
+              <div class="product-presentation__slider-wrapper">
+                <span class="product-presentation__label product-presentation__label--before">Было</span>
+                <div class="product-presentation__slider-btn"></div>
+                <div class="product-presentation__slider-scale"></div>
+                <span class="product-presentation__label product-presentation__label--after">Стало</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>

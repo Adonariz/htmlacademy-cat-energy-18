@@ -1,15 +1,18 @@
+// Общее
+
 .program-selection__title {
-  @include oswald-regular (36px, 1.67);
+  @include oswald (36px, 1.67, 400);
+  margin: 0;
 }
 
 .program-selection__suggest {
-  @include oswald-regular (14px, 1.29);
+  @include oswald (14px, 1.29, 400);
   text-transform: uppercase;
   margin-bottom: 40px;
 }
 
-.selection-form__label {
-  @include oswald-regular (16px, 1.13);
+.program-selection__label {
+  @include oswald (16px, 1.13, 400);
   color: $black-2;
   text-transform: uppercase;
 
@@ -17,16 +20,76 @@
   align-items: center;
   margin: 0;
   margin-bottom: 14px;
+
+  cursor: pointer;
 }
 
-.selection-form__legend {
-  @include oswald-regular (24px, 1);
-  margin-top: 30px;
+// Иконка к email
+
+.program-selection__label--email::after {
+  content: "";
+  display: block;
+
+  width: 18px;
+  height: 14px;
+
+  background-image: url("../img/icon-mail.svg");
+  background-repeat: no-repeat;
+
+  position: absolute;
+  right: 10px;
+}
+
+// Иконка к телефону
+
+.program-selection__label--phone::after {
+  content: "";
+  display: block;
+
+  width: 21px;
+  height: 21px;
+
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+
+  position: absolute;
+  right: 7px;
+}
+
+// Подзаголовки полей
+
+.program-selection__legend {
+  @include oswald (24px, 1, 400);
   margin-bottom: 30px;
+  padding-right: 25px;
+
+  display: flex;
+  max-width: 210px;
+
+  position: relative;
+
+  background-color: $white-1;
+
+  // Декоративная полоска
+  &::after {
+    content: "";
+    display: block;
+
+    width: 300px;
+    height: 3px;
+
+    background-color: $leaf;
+
+    position: absolute;
+    top: 13px;
+    z-index: -1;
+  }
 }
 
-.selection-form__input {
-  @include oswald-regular (16px, 1.13);
+// Инпуты
+
+.program-selection__input {
+  @include oswald (16px, 1.13, 400);
   color: $greyish-brown;
   text-transform: uppercase;
 
@@ -35,53 +98,420 @@
   margin-left: 16px;
   padding-left: 16px;
   border: 1px solid rgba(#cdcdcd, 0.5);
+
+  position: relative;
 }
 
-.selection-form__cat-data {
+// Радио чекбоксы
+
+.program-selection__label--radio {
+  margin: 0;
+  margin-left: 70px;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+
+    position: absolute;
+    left: -50px;
+  }
+
+  &::after {
+    content: "";
+    display: none;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+    background-color: $leaf;
+
+    position: absolute;
+    left: -40px;
+  }
+}
+
+// Кастомный чекбокс
+
+.program-selection__label--checkbox {
+  margin: 0;
+  margin-left: 50px;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #cdcdcd;
+
+    position: absolute;
+    left: -50px;
+  }
+
+  &::after {
+    content: "";
+    display: none;
+
+    width: 22px;
+    height: 17px;
+
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+
+    position: absolute;
+    left: -45px;
+  }
+}
+
+// Работа кастомных чекбоксов
+
+.program-selection__input[type="radio"]:checked + .program-selection__label--radio::after {
+  display: block;
+}
+
+.program-selection__input[type="checkbox"]:checked + .program-selection__label--checkbox::after {
+  display: block;
+}
+
+// Поля формы
+
+// Ввод данных кота
+
+.program-selection__profile {
   @include fieldset-reset;
+}
+
+.program-selection__cat-data-list {
+  @include list-reset;
+}
+
+// Выбор программы
+
+.program-selection__program-select-list {
+  @include list-reset;
+
+  width: 320px;
+  min-height: 158px;
+
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  margin-left: -20px;
+
+  border: 1px solid #ededed;
 }
 
-.selection-form__program-select {
-  @include fieldset-reset;
+.program-selection__program-select-item {
   display: flex;
-  flex-direction: column;
+  height: 30px;
 }
 
-.selection-form__owner-contacts {
+// Контактные данные владельца
+
+.program-selection__owner-contacts {
   @include fieldset-reset;
-  display: flex;
-  flex-direction: column;
+  margin-top: 30px;
 }
 
-.selection-form__comment {
+.program-selection__owner-contacts-list {
+  @include list-reset;
+}
+
+.program-selection__owner-contacts-item {
+  position: relative;
+}
+
+// Поле с комментарием
+
+.program-selection__comment {
   @include fieldset-reset;
+  margin-top: 30px;
 }
 
-.selection-form__comment-area {
-  @include oswald-regular (16px, 1.13);
+.program-selection__comment-area {
+  @include oswald (16px, 1.13, 400);
   color: $greyish-brown;
   text-transform: uppercase;
 
   display: flex;
   min-height: 150px;
-  min-width: 280px;
-  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px;
 
   border: 1px solid rgba(#cdcdcd, 0.5);
   resize: none;
   overflow: auto;
 }
 
-.selection-form__additional-goods {
+// Дополнительные товары
+
+.program-selection__additional-goods {
   @include fieldset-reset;
+  margin-top: 30px;
 }
 
-.selection-form__asterisk {
+.program-selection__additional-goods-list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.program-selection__additional-goods-item {
+  display: flex;
+  height: 30px;
+
+  margin-bottom: 15px;
+}
+
+// Кнопка и сноска
+
+.program-selection__submit {
+  width: 280px;
+  height: 40px;
+
+  margin-top: 35px;
+
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.program-selection__asterisk {
   display: block;
   text-align: center;
   line-height: 1.14;
   margin-top: 23px;
   margin-bottom: 34px;
+}
+
+// Планшетные стили
+
+@media (min-width: $tablet) {
+  // Общие
+
+  .program-selection__title {
+    font-size: 60px;
+    line-height: 1;
+
+    margin-top: 60px;
+    margin-bottom: 50px;
+  }
+
+  .program-selection__form {
+    width: 630px;
+    margin: 0 auto;
+  }
+
+  .program-selection__suggest {
+    font-size: 20px;
+    line-height: 1.5;
+    width: 325px;
+  }
+
+  .program-selection__legend {
+    font-size: 36px;
+    line-height: 1;
+
+    max-width: 100%;
+
+    margin-left: -30px;
+    padding: 0 30px;
+
+    // Декоративная полоска
+    &::after {
+      width: 768px;
+      top: 50%;
+      left: -39px;
+    }
+  }
+
+  .program-selection__label {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .program-selection__input {
+    font-size: 20px;
+    line-height: 1;
+    height: 52px;
+  }
+
+  // Кастомные радио чекбоксы
+
+  .program-selection__label--radio {
+    &::before {
+      width: 40px;
+      height: 40px;
+
+      left: -55px;
+    }
+
+    &::after {
+      width: 18px;
+      height: 18px;
+
+      left: -43px;
+    }
+  }
+
+  // Кастомные чекбоксы
+
+  .program-selection__label--checkbox {
+    &::before {
+      width: 40px;
+      height: 40px;
+
+      left: -50px;
+    }
+
+    &::after {
+      width: 21px;
+      height: 16px;
+
+      left: -40px;
+    }
+  }
+
+  // Выбор программы
+
+  .program-selection__program-select-list {
+    width: 100%;
+    min-height: 196px;
+    margin-left: 0;
+  }
+
+  // Дополнительные товары
+
+  .program-selection__additional-goods-list {
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 560px;
+    height: auto;
+  }
+
+  .program-selection__additional-goods-item {
+    height: 40px;
+    width: 215px;
+
+    margin-bottom: 30px;
+  }
+
+  // Кнопка и сноска
+
+  .program-selection__submit {
+    display: inline-block;
+    vertical-align: top;
+
+    width: 283px;
+    height: 52px;
+
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .program-selection__asterisk {
+    display: inline-block;
+    vertical-align: top;
+
+    font-size: 16px;
+    line-height: 1;
+
+    margin-bottom: 70px;
+    margin-left: 60px;
+  }
+}
+
+// Десктопные стили
+
+@media (min-width: $desktop) {
+  // Общие
+  .program-selection__form {
+    width: 100%;
+  }
+
+  .program-selection__label {
+    margin-bottom: 0;
+  }
+
+  .program-selection__legend {
+    // Декоративная полоска
+    &::after {
+      width: 1440px;
+      top: 50%;
+      left: -80px;
+    }
+  }
+
+  // Данные кота и выбор программы
+
+  .program-selection__profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .program-selection__cat-data-list {
+    width: 570px;
+    min-height: 196px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .program-selection__program-select-list {
+    width: 500px;
+  }
+
+  // Контактные данные
+
+  .program-selection__owner-contacts-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .program-selection__owner-contacts-item {
+    width: 500px;
+
+    &:first-of-type {
+      width: 570px;
+    }
+  }
+
+  // Дополнительно
+
+  .program-selection__additional-goods-list {
+    width: 100%;
+  }
+
+  // Кнопка и сноска
+
+  .program-selection__submit {
+    width: 568px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+
+  .program-selection__asterisk {
+    margin-top: 80px;
+  }
 }
