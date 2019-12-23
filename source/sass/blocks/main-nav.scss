@@ -1,29 +1,65 @@
 .main-nav {
   @include oswald (20px, 1, 500);
   text-transform: uppercase;
+
   display: flex;
   flex-wrap: wrap;
+
+  position: relative;
+
+  border-bottom: 1px solid $light-grey;
 }
 
 .main-nav__logo {
   display: flex;
   margin-top: 11px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   margin-left: 20px;
 }
 
+// Управление отображением мобильного меню
 .main-nav__menu-button {
-  width: 25px;
-  height: 19px;
-  margin-top: 23px;
-  margin-right: 20px;
-  margin-left: auto;
+  width: 40px;
+  height: 40px;
 
   border: none;
   background: none;
+
+  position: absolute;
+  top: 12px;
+  right: 10px;
+
+  background-image: url("../img/icon-close.svg");
+  background-size: 19px;
+  background-repeat: no-repeat;
+  background-position: 50%;
   outline: 1px solid red;
+  // Меню закрыто
+  &--closed::before {
+    content: "";
+    display: block;
+
+    width: 25px;
+    height: 25px;
+
+    background-color: #ffffff;
+    background-image: url("../img/icon-mobile-menu.svg");
+    background-size: 25px 19px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  // Скрипт не работает (меню открыто)
+  &--nojs {
+    display: none;
+  }
 }
 
+// Сокрытие списка меню
+.main-nav__menu-button--closed ~ .main-nav__list {
+  display: none;
+}
+
+// Стили списка меню
 .main-nav__list {
   @include list-reset;
   display: flex;
@@ -35,10 +71,6 @@
   display: flex;
   width: 100%;
   border-top: 1px solid $light-grey;
-
-  &:last-of-type {
-    border-bottom: 1px solid $light-grey;
-  }
 }
 
 .main-nav__link {
@@ -47,6 +79,7 @@
   padding-bottom: 20px;
 }
 
+// Планшетная версия
 @media (min-width: $tablet) {
   .main-nav {
     @include oswald (18px, 1.39, 400);
@@ -93,6 +126,7 @@
   }
 }
 
+// Десктопная версия
 @media (min-width: $desktop) {
   .main-nav {
     padding-top: 43px;

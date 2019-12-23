@@ -6,7 +6,8 @@
   @include oswald (36px, 1.67, 400);
   color: $black-1;
   margin: 0;
-  margin-bottom: 20px;
+  margin-top: 18px;
+  margin-bottom: 27px;
 }
 
 .advantages__list {
@@ -16,7 +17,7 @@
 .advantages__item {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   &::before {
     content: "";
@@ -33,7 +34,7 @@
 
   &--healthy::before {
     background-image: url("../img/advantage-leaf@1x.png");
-    background-size: contain;
+    background-size: 50px;
 
     @media (min-resolution: $retina) {
       background-image: url("../img/advantage-leaf@2x.png");
@@ -42,7 +43,7 @@
 
   &--easy::before {
     background-image: url("../img/advantage-powder@1x.png");
-    background-size: contain;
+    background-size: 50px;
 
     @media (min-resolution: $retina) {
       background-image: url("../img/advantage-powder@2x.png");
@@ -51,7 +52,7 @@
 
   &--food::before {
     background-image: url("../img/advantage-dining@1x.png");
-    background-size: contain;
+    background-size: 50px;
 
     @media (min-resolution: $retina) {
       background-image: url("../img/advantage-dining@2x.png");
@@ -60,7 +61,7 @@
 
   &--time::before {
     background-image: url("../img/advantage-clock@1x.png");
-    background-size: contain;
+    background-size: 50px;
 
     @media (min-resolution: $retina) {
       background-image: url("../img/advantage-clock@2x.png");

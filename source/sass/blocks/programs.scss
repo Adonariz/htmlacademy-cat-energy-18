@@ -1,14 +1,21 @@
 .programs__list {
   @include list-reset;
+
+  margin-top: 22px;
 }
 
 .programs__item {
-  margin-top: 20px;
   padding-left: 20px;
+
   display: flex;
   justify-content: center;
   flex-direction: column;
+
   background-color: $light-grey;
+
+  &:first-of-type {
+    margin-bottom: 23px;
+  }
 }
 
 .programs__title {
@@ -19,9 +26,11 @@
 
   display: flex;
   align-items: center;
+
   margin: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 24px;
+  margin-bottom: 22px;
+
   position: relative;
 
   &::before {
@@ -29,7 +38,10 @@
     display: block;
     width: 50px;
     height: 50px;
+
     margin-right: 20px;
+    margin-left: 2px;
+
     border-radius: 50%;
 
     background-color: $leaf;
@@ -56,7 +68,7 @@
     content: "";
     display: block;
     position: absolute;
-    left: -10px;
+    left: -7px;
 
     width: 67px;
     height: 28px;
@@ -75,8 +87,10 @@
 .programs__link {
   @include oswald (16px, 1, 400);
   text-transform: uppercase;
-  margin-top: 20px;
+
+  margin-top: 42px;
   margin-bottom: 22px;
+
   position: relative;
 
   &::after {
@@ -86,7 +100,7 @@
     height: 11px;
 
     position: absolute;
-    left: 125px;
+    left: 97px;
     top: 5px;
     background-image: url("../img/icon-right-arrow-long.svg");
   }
