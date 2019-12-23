@@ -83,13 +83,16 @@
 @media (min-width: $tablet) {
   .main-nav {
     @include oswald (18px, 1.39, 400);
-    padding-top: 24px;
+    padding-top: 10px;
     align-items: center;
+    border: none;
   }
 
   .main-nav__logo-img {
-    width: 174px;
-    height: 59px;
+    width: 191px;
+    height: 64px;
+
+    margin-left: -19px;
   }
 
   .main-nav__menu-button {
@@ -97,7 +100,6 @@
   }
 
   .main-nav__list {
-    margin-right: 20px;
     margin-left: auto;
   }
 
@@ -111,13 +113,13 @@
     }
 
     &:not(:first-of-type) {
-      margin-left: 38px;
+      margin-left: 35px;
     }
   }
 
   .main-nav__link {
     width: auto;
-    padding: 10px 0;
+    padding: 5px 0;
 
     &--active {
       border-bottom: 2px solid $leaf;
@@ -135,7 +137,7 @@
   }
 
   .main-nav__logo-img {
-    width: 203px;
+    width: 219px;
     height: 60px;
   }
 

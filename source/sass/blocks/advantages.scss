@@ -74,22 +74,26 @@
     font-size: 60px;
     line-height: 1;
     display: flex;
-    padding-top: 50px;
-    margin-bottom: 60px;
+    margin-top: 45px;
+    margin-bottom: 72px;
   }
 
   .advantages__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .advantages__item {
     @include arial (16px, 1.5);
+
     flex-direction: column;
     align-items: flex-start;
     max-width: 245px;
-    margin-right: 100px;
-    margin-bottom: 130px;
+
+    margin-right: 79px;
+    margin-bottom: 135px;
+
     position: relative;
 
     &::before {
@@ -110,30 +114,35 @@
     &--healthy::after {
       content: "1";
       top: -40px;
-      right: 10px;
+      right: 16px;
     }
 
     &--easy::after {
       content: "2";
-      top: -40px;
+      top: -39px;
       right: 0;
     }
 
     &--food::after {
       content: "3";
-      top: -40px;
-      right: 0;
+      top: -39px;
+      right: -2px;
     }
 
     &--time::after {
       content: "4";
-      top: -40px;
-      right: 0;
+      top: -39px;
+      right: -4px;
     }
   }
 }
 
 @media (min-width: $desktop) {
+  .advantages__title {
+    margin-top: 74px;
+    margin-bottom: 72px;
+  }
+
   .advantages__list {
     justify-content: space-between;
   }
