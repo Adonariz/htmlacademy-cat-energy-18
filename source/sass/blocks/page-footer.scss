@@ -10,22 +10,24 @@
 
 .page-footer__logo {
   margin-top: 39px;
-  margin-bottom: 31px;
+  margin-bottom: 27px;
 }
 
 .page-footer__copyright {
   width: 100%;
+  min-height: 72px;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
-  margin-top: 20px;
-  margin-bottom: 20px;
 
   font-size: 16px;
   line-height: 1;
   color: $greyish-brown;
+}
+
+.page-footer__academy-logo {
+  margin-right: -6px;
+  margin-left: auto;
 }
 
 @media (min-width: $tablet) {
