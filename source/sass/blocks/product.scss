@@ -2,10 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   height: 210px;
+  box-sizing: border-box;
 }
 
 .product__image {
-  margin-left: 20px;
+  margin-left: 19px;
 }
 
 .product__description {
@@ -18,15 +19,17 @@
 .product__product-name {
   @include oswald (16px, 1.25, 400);
   text-transform: uppercase;
+
   width: 100px;
-  margin-top: 25px;
+
+  margin: 0;
+  margin-top: 22px;
 }
 
 .product__spec {
   width: 140px;
-  margin-right: 20px;
   font-size: 12px;
-  line-height: 1.33;
+  line-height: 14px;
   color: $greyish-brown;
   border-collapse: collapse;
 }
@@ -46,48 +49,54 @@
   margin-right: auto;
   margin-bottom: 25px;
   margin-left: auto;
+
+  font-size: 16px;
+  line-height: 1.25;
 }
 
 @media (min-width: $tablet) {
   .product {
     flex-direction: column;
     align-items: center;
+    flex-wrap: nowrap;
+
     width: 324px;
     min-height: 431px;
-    margin-top: 140px;
+
     background-color: $light-grey;
   }
 
   .product__image {
     &--small {
-      width: 245px;
-      height: 172px;
+      width: 322px;
+      height: 173px;
 
-      object-fit: contain;
-
-      margin-top: -57px;
+      margin-top: -47px;
       margin-left: 0;
     }
 
     &--big {
-      width: 245px;
+      width: 322px;
       height: 208px;
-      object-fit: contain;
 
-      margin-top: -90px;
+      margin-top: -82px;
       margin-left: 0;
     }
   }
 
   .product__description {
     width: 249px;
-    margin-top: auto;
   }
 
   .product__product-name {
     text-align: center;
     align-self: center;
+
     width: 130px;
+
+    margin-top: 36px;
+    margin-bottom: 19px;
+
     font-size: 20px;
     line-height: 1;
   }
@@ -100,15 +109,14 @@
 
   .product__spec-row {
     border-bottom: 1px solid rgba($brownish-grey, 0.3);
-    height: 30px;
+    height: 32px;
   }
 
   .product__link {
     width: 249px;
     height: 40px;
 
-    margin-top: 30px;
-    margin-bottom: 40px;
+    margin-top: 33px;
   }
 }
 

@@ -28,10 +28,12 @@
 .intro__button {
   width: 280px;
   height: 40px;
+
+  margin-top: 4px;
 }
 
 .intro__img {
-  margin-top: 16px;
+  margin-top: 30px;
 }
 
 @media (min-width: $tablet) {
@@ -50,9 +52,9 @@
     width: 415px;
 
     margin: 0;
-    margin-top: 36px;
+    margin-top: 40px;
     margin-left: 87px;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
 
     font-size: 60px;
     color: $black-1;
@@ -63,7 +65,7 @@
   .intro__slogan {
     margin: 0;
     margin-left: 87px;
-    margin-bottom: 49px;
+    margin-bottom: 44px;
 
     font-size: 20px;
     color: $black-1;
@@ -83,7 +85,7 @@
     width: 245px;
     height: 52px;
 
-    margin-left: 90px;
+    margin-left: 89px;
 
     order: -1;
     z-index: 1;
@@ -95,7 +97,7 @@
 
 @media (min-width: $desktop) {
   .intro {
-    margin-top: -134px;
+    margin-top: -128px;
   }
 
   .intro__wrapper {
@@ -115,13 +117,13 @@
 
   .intro__title {
     margin: 0;
-    margin-top: 224px;
+    margin-top: 221px;
     margin-left: 80px;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 
   .intro__slogan {
-    margin-bottom: 53px;
+    margin-bottom: 49px;
     margin-left: 80px;
   }
 
@@ -133,7 +135,7 @@
 
     position: absolute;
     right: 328px;
-    top: 143px;
+    top: 142px;
   }
 
   .intro__button {
