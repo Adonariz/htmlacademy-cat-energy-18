@@ -3,30 +3,37 @@
   text-align: center;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: 320px 305px;
   background-position: 50% 0;
+
+  @media (min-resolution: $retina) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .intro__title {
   @include oswald (36px, 1, 400);
   color: $white-1;
   margin: 0;
-  margin-top: 29px;
+  margin-top: 28px;
 }
 
 .intro__slogan {
   @include oswald (14px, 1, 400);
   color: $white-1;
   text-transform: uppercase;
-  margin-top: 19px;
+  margin-top: 23px;
 }
 
 .intro__button {
   width: 280px;
   height: 40px;
+
+  margin-top: 4px;
 }
 
 .intro__img {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 @media (min-width: $tablet) {
@@ -43,60 +50,95 @@
 
   .intro__title {
     width: 415px;
-    margin-top: 80px;
-    margin-left: 90px;
+
+    margin: 0;
+    margin-top: 40px;
+    margin-left: 87px;
+    margin-bottom: 42px;
 
     font-size: 60px;
     color: $black-1;
+
+    order: -1;
   }
 
   .intro__slogan {
-    margin-top: 30px;
-    margin-left: 90px;
+    margin: 0;
+    margin-left: 87px;
+    margin-bottom: 44px;
 
     font-size: 20px;
     color: $black-1;
+
+    order: -1;
   }
 
   .intro__img {
-    order: 1;
+    width: 709px;
+    height: 609px;
+
+    margin: 0;
+    margin-top: -80px;
   }
 
   .intro__button {
     width: 245px;
     height: 52px;
 
-    margin-top: 10px;
-    margin-left: 90px;
+    margin-left: 89px;
+
+    order: -1;
+    z-index: 1;
+
+    font-size: 20px;
+    line-height: 1;
   }
 }
 
 @media (min-width: $desktop) {
   .intro {
-    margin-top: -134px;
-    position: relative;
+    margin-top: -128px;
   }
 
   .intro__wrapper {
     min-height: 696px;
 
+    position: relative;
+
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: right;
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 
   .intro__title {
-    margin-top: 230px;
+    margin: 0;
+    margin-top: 221px;
+    margin-left: 80px;
+    margin-bottom: 42px;
+  }
+
+  .intro__slogan {
+    margin-bottom: 49px;
+    margin-left: 80px;
   }
 
   .intro__img {
+    width: 552px;
+    height: 499px;
+
+    margin: 0;
+
     position: absolute;
-    right: 30%;
-    top: 130px;
+    right: 328px;
+    top: 142px;
   }
 
   .intro__button {
-    margin-top: 50px;
+    margin-left: 80px;
   }
 }

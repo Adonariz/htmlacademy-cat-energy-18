@@ -1,31 +1,68 @@
 .main-nav {
   @include oswald (20px, 1, 500);
   text-transform: uppercase;
+
   display: flex;
   flex-wrap: wrap;
+
+  position: relative;
+
+  border-bottom: 1px solid $light-grey;
 }
 
 .main-nav__logo {
   display: flex;
   margin-top: 11px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   margin-left: 20px;
 }
 
+// Управление отображением мобильного меню
 .main-nav__menu-button {
-  width: 25px;
-  height: 19px;
-  margin-top: 23px;
-  margin-right: 20px;
-  margin-left: auto;
+  width: 40px;
+  height: 40px;
 
   border: none;
   background: none;
+
+  position: absolute;
+  top: 10px;
+  right: 12px;
+
+  background-image: url("../img/icon-close.svg");
+  background-size: 19px;
+  background-repeat: no-repeat;
+  background-position: 50%;
   outline: 1px solid red;
+  // Меню закрыто
+  &--closed::before {
+    content: "";
+    display: block;
+
+    width: 25px;
+    height: 25px;
+
+    background-color: #ffffff;
+    background-image: url("../img/icon-mobile-menu.svg");
+    background-size: 25px 19px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  // Скрипт не работает (меню открыто)
+  &--nojs {
+    display: none;
+  }
 }
 
+// Сокрытие списка меню
+.main-nav__menu-button--closed ~ .main-nav__list {
+  display: none;
+}
+
+// Стили списка меню
 .main-nav__list {
   @include list-reset;
+
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -35,23 +72,30 @@
   display: flex;
   width: 100%;
   border-top: 1px solid $light-grey;
-
-  &:last-of-type {
-    border-bottom: 1px solid $light-grey;
-  }
 }
 
 .main-nav__link {
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
+
+  box-sizing: border-box;
 }
 
+// Планшетная версия
 @media (min-width: $tablet) {
   .main-nav {
     @include oswald (18px, 1.39, 400);
-    padding-top: 24px;
+    padding-top: 10px;
     align-items: center;
+    border: none;
+  }
+
+  .main-nav__logo-img {
+    width: 191px;
+    height: 64px;
+
+    margin-left: -19px;
   }
 
   .main-nav__menu-button {
@@ -59,7 +103,6 @@
   }
 
   .main-nav__list {
-    margin-right: 20px;
     margin-left: auto;
   }
 
@@ -73,13 +116,13 @@
     }
 
     &:not(:first-of-type) {
-      margin-left: 38px;
+      margin-left: 35px;
     }
   }
 
   .main-nav__link {
     width: auto;
-    padding: 10px 0;
+    padding: 7px 0;
 
     &--active {
       border-bottom: 2px solid $leaf;
@@ -88,11 +131,17 @@
   }
 }
 
+// Десктопная версия
 @media (min-width: $desktop) {
   .main-nav {
-    padding-top: 70px;
+    padding-top: 43px;
     position: relative;
     z-index: 1;
+  }
+
+  .main-nav__logo-img {
+    width: 219px;
+    height: 60px;
   }
 
   .main-nav__link {
