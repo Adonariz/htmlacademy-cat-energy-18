@@ -18,6 +18,18 @@
 }
 
 // Управление отображением мобильного меню
+
+// Скрипт не работает (меню открыто)
+.main-nav--nojs .main-nav__menu-button {
+  display: none;
+}
+
+// Меню скрыто
+.main-nav--closed .main-nav__list {
+  display: none;
+}
+
+// Кнопка меню
 .main-nav__menu-button {
   width: 40px;
   height: 40px;
@@ -28,41 +40,27 @@
   position: absolute;
   top: 10px;
   right: 12px;
-
+}
+// Крестик
+.main-nav .main-nav__menu-button {
   background-image: url("../img/icon-close.svg");
   background-size: 19px;
   background-repeat: no-repeat;
   background-position: 50%;
-  outline: 1px solid red;
-  // Меню закрыто
-  &--closed::before {
-    content: "";
-    display: block;
-
-    width: 25px;
-    height: 25px;
-
-    background-color: #ffffff;
-    background-image: url("../img/icon-mobile-menu.svg");
-    background-size: 25px 19px;
-    background-repeat: no-repeat;
-    background-position: 50%;
-  }
-  // Скрипт не работает (меню открыто)
-  &--nojs {
-    display: none;
-  }
 }
-
-// Сокрытие списка меню
-.main-nav__menu-button--closed ~ .main-nav__list {
-  display: none;
+// Крестик
+.main-nav--closed .main-nav__menu-button {
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-size: 25px 19px;
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
 
 // Стили списка меню
 .main-nav__list {
   @include list-reset;
 
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -103,6 +101,7 @@
   }
 
   .main-nav__list {
+    width: auto;
     margin-left: auto;
   }
 

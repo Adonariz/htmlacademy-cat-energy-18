@@ -7,14 +7,18 @@
   @include oswald (36px, 1.67, 400);
 
   margin: 0;
-  margin-bottom: 33px;
-  padding-top: 33px;
+  margin-bottom: 23px;
+  margin-top: 38px;
 }
 
+// Описание
 .product-presentation__description {
+  margin: 0;
+  margin-bottom: 24px;
   color: $greyish-brown;
 }
 
+// Табличка
 .product-presentation__list {
   display: flex;
   flex-wrap: wrap;
@@ -23,6 +27,7 @@
   position: relative;
 }
 
+// Термин (внизу)
 .product-presentation__term {
   font-size: 12px;
   line-height: 1;
@@ -39,16 +44,17 @@
   z-index: 1;
 
   &--weight {
-    bottom: -15px;
-    left: 22px;
+    bottom: -11px;
+    left: 20px;
   }
 
   &--time {
-    right: 22px;
-    bottom: -15px;
+    right: 20px;
+    bottom: -11px;
   }
 }
 
+// Цифры (посередине)
 .product-presentation__definition {
   @include oswald (24px, 1, 400);
   text-transform: uppercase;
@@ -68,18 +74,20 @@
   border-radius: 3px;
 }
 
+// Затраты
 .product-presentation__costs {
   @include oswald (14px, 1.43, 400);
   text-transform: uppercase;
   text-align: center;
 
   margin: 0;
-  margin-top: 40px;
-  margin-bottom: 45px;
+  margin-top: 32px;
+  margin-bottom: 40px;
 }
 
+// Фото
 .product-presentation__photo {
-  margin-left: -15px;
+  object-fit: cover;
   margin-bottom: 35px;
 
   &--before {
@@ -91,27 +99,30 @@
   }
 }
 
+// Слайдер
 .product-presentation__slider-wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
+// Надписи
 .product-presentation__label {
   @include oswald (16px, 1.25, 400);
   text-transform: uppercase;
 
   &--before {
-    margin-left: 40px;
+    margin-right: 18px;
+    margin-left: 44px;
   }
 
   &--after {
-    margin-right: 30px;
+    margin-left: 15px;
   }
 }
 
+// Переключатель (ползунок)
 .product-presentation__slider-btn {
   width: 84px;
   height: 14px;
@@ -141,23 +152,26 @@
 
 @media (min-width: $tablet) {
   .product-presentation {
-    background: none;
-    border-top: 1px solid #cdcdcd;
+    background: linear-gradient(to right, $light-grey 50%, #eaeaea 50%);
+  }
+
+  .product-presentation__wrapper {
+    margin-top: -450px;
   }
 
   .product-presentation__title {
     font-size: 60px;
     line-height: 1;
 
-    margin-top: 50px;
-    margin-bottom: 60px;
+    margin-top: 42px;
+    margin-bottom: 65px;
   }
 
   .product-presentation__description {
     font-size: 16px;
     line-height: 1.5;
 
-    margin-bottom: 56px;
+    margin-bottom: 24px;
   }
 
   .product-presentation__stats-wrapper {
@@ -166,19 +180,26 @@
   }
 
   .product-presentation__term {
-    width: 130px;
-    height: 27px;
+    width: auto;
+    height: auto;
+
     font-size: 14px;
     background-color: $white-1;
 
     &--weight {
-      bottom: -18px;
-      left: 18px;
+      padding-right: 6px;
+      padding-left: 10px;
+
+      bottom: -4px;
+      left: 23px;
     }
 
     &--time {
-      bottom: -18px;
-      right: 18px;
+      padding-right: 6px;
+      padding-left: 6px;
+
+      bottom: -4px;
+      right: 13px;
     }
   }
 
@@ -190,7 +211,7 @@
     height: 72px;
 
     &:first-of-type {
-      margin-right: 42px;
+      margin-right: 40px;
     }
   }
 
@@ -201,6 +222,27 @@
 
     width: 175px;
     margin-left: auto;
+  }
+
+  .product-presentation__photo-wrapper {
+    outline: 1px solid red;
+    overflow: hidden;
+    object-position: 50%;
+
+    &--before {
+      height: 499px;
+
+    }
+  }
+
+  .product-presentation__photo {
+    &--before {
+      width: auto;
+      height: 499px;
+
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
   .product-presentation__slider-wrapper {

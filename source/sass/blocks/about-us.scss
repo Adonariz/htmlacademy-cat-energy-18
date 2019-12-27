@@ -9,9 +9,16 @@
 .about-us__wrapper {
   display: flex;
   justify-content: space-between;
-  padding-top: 31px;
-  padding-bottom: 26px;
+
+  padding-top: 29px;
+  padding-bottom: 25px;
+
   position: relative;
+  z-index: 1;
+
+  &--index {
+    background-color: $white-1;
+  }
 }
 
 .about-us__partnership {
@@ -19,6 +26,7 @@
   text-transform: uppercase;
   margin: 0;
   margin-right: 19px;
+
 }
 
 .about-us__adress {
@@ -26,6 +34,31 @@
   margin: 0;
   line-height: 1.43;
   color: $greyish-brown;
+}
+
+.about-us__map {
+  display: flex;
+
+  margin-top: -40px;
+
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    bottom: 167px;
+    left: calc(50% - (62px / 2));
+    z-index: 1;
+
+    width: 55px;
+    height: 53px;
+
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .about-us__map-img {

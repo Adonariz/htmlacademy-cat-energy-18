@@ -9,16 +9,17 @@
 }
 
 .page-footer__logo {
-  margin-top: 39px;
-  margin-bottom: 27px;
+  margin-top: 41px;
+  margin-bottom: 17px;
 }
 
 .page-footer__copyright {
   width: 100%;
-  min-height: 72px;
 
   display: flex;
   align-items: center;
+
+  margin-bottom: 20px;
 
   font-size: 16px;
   line-height: 1;
@@ -26,7 +27,7 @@
 }
 
 .page-footer__academy-logo {
-  margin-right: -6px;
+  margin-right: -7px;
   margin-left: auto;
 }
 
