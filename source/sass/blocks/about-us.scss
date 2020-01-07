@@ -69,7 +69,7 @@
 @media (min-width: $tablet) {
   .about-us__wrapper {
     min-height: 201px;
-    align-items: center;
+    padding: 0;
   }
 
   .about-us__partnership {
@@ -79,7 +79,8 @@
     width: 150px;
 
     margin: 0;
-    margin-left: 35px;
+    margin-top: 65px;
+    margin-left: 41px;
   }
 
   .about-us__adress {
@@ -90,12 +91,29 @@
     width: 150px;
 
     margin: 0;
-    margin-right: 35px;
+    margin-top: 62px;
+    margin-right: 45px;
   }
 
   .about-us__city {
     display: block;
-    margin-top: 15px;
+    margin-top: 20px;
+  }
+
+  .about-us__map {
+    margin-top: -4px;
+
+    &::after {
+      width: 113px;
+      height: 106px;
+
+      bottom: 144px;
+      left: calc(50% - (124px / 2));
+    }
+  }
+
+  .about-us__map-img {
+    width: 100%;
   }
 }
 

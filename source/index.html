@@ -107,24 +107,22 @@
               </div>
             </div>
             <div class="product-presentation__before-after">
-              <div class="product-presentation__photo-wrapper product-presentation__photo-wrapper--before">
-                <picture>
-                  <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
-                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
-                  <img class="product-presentation__photo product-presentation__photo--before" src="img/before-mobile@1x.png" alt="Фото до" width="311" height="232">
-                </picture>
-              </div>
-              <div class="product-presentation__photo-wrapper product-presentation__photo-wrapper--after">
-                <picture>
-                  <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png">
-                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
-                  <img class="product-presentation__photo product-presentation__photo--after" src="img/after-mobile@1x.png" alt="Фото после" width="311" height="232">
-                </picture>
-              </div>
+              <picture class="product-presentation__photo-wrapper product-presentation__photo-wrapper--before">
+                <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+                <img class="product-presentation__photo product-presentation__photo--before" src="img/before-mobile@1x.png" alt="Фото до" width="311" height="232">
+              </picture>
+              <picture class="product-presentation__photo-wrapper product-presentation__photo-wrapper--after">
+                <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+                <img class="product-presentation__photo product-presentation__photo--after" src="img/after-mobile@1x.png" alt="Фото после" width="311" height="232">
+              </picture>
               <div class="product-presentation__slider-wrapper">
                 <span class="product-presentation__label product-presentation__label--before">Было</span>
-                <div class="product-presentation__slider-btn"></div>
-                <div class="product-presentation__slider-scale"></div>
+                <div class="product-presentation__scale-wrapper">
+                  <div class="product-presentation__slider-btn"></div>
+                  <div class="product-presentation__slider-scale"></div>
+                </div>
                 <span class="product-presentation__label product-presentation__label--after">Стало</span>
               </div>
             </div>
@@ -138,9 +136,11 @@
           <p class="about-us__partnership">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <p class="about-us__adress">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 <span class="about-us__city">Санкт-Петербург</span></p>
         </div>
-        <div class="about-us__map">
+        <picture class="about-us__map">
+          <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
           <img class="about-us__map-img" src="img/bg-map-mobile@1x.png" alt="Адрес магазина на карте" width="320" height="400">
-        </div>
+        </picture>
       </section>
     </main>
 
