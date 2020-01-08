@@ -1,4 +1,5 @@
 .about-us {
+  position: relative;
   background-color: $light-grey;
 }
 
@@ -7,18 +8,20 @@
 }
 
 .about-us__wrapper {
-  display: flex;
-  justify-content: space-between;
-
-  padding-top: 29px;
-  padding-bottom: 25px;
-
   position: relative;
   z-index: 1;
 
   &--index {
     background-color: $white-1;
   }
+}
+
+.about-us__text-container {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 29px;
+  padding-bottom: 25px;
 }
 
 .about-us__partnership {
@@ -39,7 +42,7 @@
 .about-us__map {
   display: flex;
 
-  margin-top: -40px;
+  margin-top: -38px;
 
   position: relative;
 
@@ -48,7 +51,7 @@
     display: block;
 
     position: absolute;
-    bottom: 167px;
+    bottom: 170px;
     left: calc(50% - (62px / 2));
     z-index: 1;
 
@@ -67,7 +70,7 @@
 }
 
 @media (min-width: $tablet) {
-  .about-us__wrapper {
+  .about-us__text-container {
     min-height: 201px;
     padding: 0;
   }
@@ -113,13 +116,39 @@
   }
 
   .about-us__map-img {
-    width: 100%;
+    width: 768px;
   }
 }
 
 @media (min-width: $desktop) {
-  .about-us__wrapper {
+  .about-us__text-container {
     width: 570px;
+
+    position: absolute;
+    top: 95px;
+    left: 110px;
+
     background-color: $white-1;
+  }
+
+  .about-us__partnership {
+    margin-left: 76px;
+  }
+
+  .about-us__adress {
+    text-align: left;
+    margin-right: 95px;
+  }
+
+  .about-us__map {
+    margin-top: 0;
+
+    &::after {
+      left: calc(50% + 278px);
+    }
+  }
+
+  .about-us__map-img {
+    width: 1440px;
   }
 }

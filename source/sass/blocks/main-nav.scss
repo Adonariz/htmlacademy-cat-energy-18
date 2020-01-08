@@ -2,6 +2,8 @@
   @include oswald (20px, 1, 500);
   text-transform: uppercase;
 
+  min-height: 65px;
+
   display: flex;
   flex-wrap: wrap;
 
@@ -13,7 +15,6 @@
 .main-nav__logo {
   display: flex;
   margin-top: 11px;
-  margin-bottom: 14px;
   margin-left: 20px;
 }
 
@@ -90,7 +91,7 @@
   }
 
   .main-nav__logo-img {
-    width: 191px;
+    width: 173px;
     height: 64px;
 
     margin-left: -19px;
@@ -102,6 +103,8 @@
 
   .main-nav__list {
     width: auto;
+
+    margin-top: 14px;
     margin-left: auto;
   }
 
@@ -141,6 +144,8 @@
   .main-nav__logo-img {
     width: 219px;
     height: 60px;
+
+    margin-left: -28px;
   }
 
   .main-nav__link {

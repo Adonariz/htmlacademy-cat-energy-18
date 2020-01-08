@@ -34,8 +34,9 @@
 @media (min-width: $tablet) {
   .page-footer__wrapper {
     flex-direction: row;
-    align-items: center;
+    justify-content: space-between;
 
+    height: 150px;
     min-height: 150px;
   }
 
@@ -44,13 +45,11 @@
   }
 
   .page-footer__social {
-    margin-left: 155px;
-    outline: 1px solid red;
+    margin-left: 25px;
   }
 
   .page-footer__copyright {
     margin-top: 19px;
-    margin-left: auto;
     width: auto;
   }
 

@@ -82,14 +82,18 @@
 
   margin: 0;
   margin-top: 32px;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 // Фото
-.product-presentation__photo {
-  object-fit: cover;
-  margin-bottom: 35px;
+.product-presentation__photo-wrapper {
+  display: block;
 
+  margin-bottom: 33px;
+  margin-left: -18px;
+}
+
+.product-presentation__photo {
   &--before {
     display: block;
   }
@@ -232,9 +236,8 @@
   }
 
   .product-presentation__photo-wrapper {
-    outline: 1px solid red;
-    display: block;
     overflow: hidden;
+    margin-left: 0;
 
     &--before {
       width: 50%;
@@ -265,7 +268,7 @@
   }
 
   .product-presentation__slider-wrapper {
-    margin-top: -22px;
+    margin-top: -18px;
     margin-bottom: 69px;
   }
 
@@ -326,22 +329,25 @@
 @media (min-width: $desktop) {
   .product-presentation {
     border-top: none;
-    background-color: $light-grey;
+    background: linear-gradient(to right, $light-grey calc(50vw + 325px), #eaeaea calc(50vw + 325px));
+  }
+
+  .product-presentation__wrapper {
+    margin-top: 0;
   }
 
   .product-presentation__title {
-    margin-top: -170px;
-    margin-bottom: 150px;
+    margin-top: -136px;
+    margin-bottom: 146px;
   }
 
   .product-presentation__container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   .product-presentation__description {
     width: 435px;
+    margin-bottom: 54px;
   }
 
   .product-presentation__stats-wrapper {
@@ -355,13 +361,12 @@
 
   .product-presentation__costs {
     display: flex;
-    width: 320px;
+    width: 327px;
 
     text-align: left;
 
     margin: 0;
-    margin-top: 60px;
-    margin-bottom: 75px;
+    margin-top: 40px;
   }
 
   .product-presentation__amount {
@@ -369,11 +374,33 @@
   }
 
   .product-presentation__before-after {
-    width: 650px;
-    margin-top: auto;
+    margin-top: -260px;
+    margin-left: 134px;
+  }
+
+  .product-presentation__photo-wrapper {
+    &--before {
+      width: 53%;
+    }
+
+    &--after {
+      width: 47%;
+      margin-top: -552px;
+    }
+  }
+
+  .product-presentation__photo {
+    margin: 0;
   }
 
   .product-presentation__slider-wrapper {
-    margin-bottom: 70px;
+    margin-top: 33px;
+    margin-bottom: 69px;
+  }
+
+  .product-presentation__label {
+    &--before {
+      margin-left: 80px;
+    }
   }
 }
