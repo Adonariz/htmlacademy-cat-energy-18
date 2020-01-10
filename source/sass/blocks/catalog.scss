@@ -10,10 +10,11 @@
 
 .catalog__page-title {
   @include oswald (36px, 1.67, 400);
+
   margin: 0;
+  margin-top: 14px;
+  margin-bottom: 29px;
   margin-left: 20px;
-  padding-top: 14px;
-  padding-bottom: 29px;
 }
 
 .catalog__item {
@@ -84,9 +85,10 @@
   .catalog__page-title {
     font-size: 60px;
     line-height: 1;
+
     margin: 0;
-    margin-top: 26px;
-    margin-bottom: 137px;
+    margin-top: 54px;
+    margin-bottom: 166px;
   }
 
   .catalog__item-wrapper {
@@ -116,7 +118,7 @@
 
     width: 135px;
 
-    margin-top: 53px;
+    margin-top: 52px;
     margin-bottom: 26px;
 
     &::before {
@@ -151,7 +153,7 @@
   }
 
   .catalog__page-title {
-    margin-top: 45px;
+    margin-top: 73px;
   }
 
   .catalog__item {
