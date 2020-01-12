@@ -29,42 +29,6 @@
   cursor: pointer;
 }
 
-// Иконка к email
-
-.program-selection__label--email::after {
-  content: "";
-  display: block;
-
-  width: 18px;
-  height: 14px;
-
-  background-image: url("../img/icon-mail.svg");
-  background-repeat: no-repeat;
-
-  position: absolute;
-  right: 15px;
-  bottom: 15px;
-  z-index: 1;
-}
-
-// Иконка к телефону
-
-.program-selection__label--phone::after {
-  content: "";
-  display: block;
-
-  width: 21px;
-  height: 21px;
-
-  background-image: url("../img/icon-phone.svg");
-  background-repeat: no-repeat;
-
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-  z-index: 1;
-}
-
 // Подзаголовки полей
 
 .program-selection__legend {
@@ -129,96 +93,11 @@
     border: 2px solid $greyish-brown;
   }
 
-  &--email:focus ~ .program-selection__label--email::after {
-    background-image: url("../img/icon-mail-green.svg");
+  &:invalid:focus {
+    box-shadow: none;
+    outline: none;
+    border: 2px solid #ff8282;
   }
-}
-
-// Радио чекбоксы
-
-.program-selection__label--radio {
-  margin: 0;
-
-  position: relative;
-
-  &::before {
-    content: "";
-    display: block;
-
-    width: 30px;
-    height: 30px;
-
-    border: 1px solid #cdcdcd;
-    border-radius: 50%;
-
-    position: absolute;
-    top: -6px;
-    left: -47px;
-  }
-
-  &::after {
-    content: "";
-    display: none;
-
-    width: 12px;
-    height: 12px;
-
-    border-radius: 50%;
-    background-color: $leaf;
-
-    position: absolute;
-    top: 4px;
-    left: -37px;
-  }
-}
-
-// Кастомный чекбокс
-
-.program-selection__label--checkbox {
-  margin: 0;
-
-  position: relative;
-
-  &::before {
-    content: "";
-    display: block;
-
-    width: 30px;
-    height: 30px;
-
-    box-sizing: border-box;
-
-    border: 1px solid #cdcdcd;
-
-    position: absolute;
-    top: -5px;
-    left: -46px;
-  }
-
-  &::after {
-    content: "";
-    display: none;
-
-    width: 22px;
-    height: 17px;
-
-    background-image: url("../img/icon-tick.svg");
-    background-repeat: no-repeat;
-
-    position: absolute;
-    top: 2px;
-    left: -42px;
-  }
-}
-
-// Работа кастомных чекбоксов
-
-.program-selection__input[type="radio"]:checked + .program-selection__label--radio::after {
-  display: block;
-}
-
-.program-selection__input[type="checkbox"]:checked + .program-selection__label--checkbox::after {
-  display: block;
 }
 
 // Поля формы
@@ -265,6 +144,58 @@
   margin-left: 65px;
 }
 
+// Радио чекбоксы
+
+.program-selection__label--radio {
+  margin: 0;
+
+  position: relative;
+  // Рамка
+  &::before {
+    content: "";
+    display: block;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -6px;
+    left: -47px;
+  }
+  // Кружок
+  &::after {
+    content: "";
+    display: none;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+    background-color: $leaf;
+
+    position: absolute;
+    top: 4px;
+    left: -37px;
+  }
+  // Стайлгайд
+  &:hover::before, &:focus::before {
+    border-color: #bababa;
+  }
+}
+
+// Работа кастомных радио чекбоксов
+
+.program-selection__input[type="radio"]:checked + .program-selection__label--radio::after {
+  display: block;
+}
+
+.program-selection__input[type="radio"]:disabled + .program-selection__label--radio {
+  opacity: 0.3;
+}
+
 // Контактные данные владельца
 
 .program-selection__owner-contacts {
@@ -280,7 +211,6 @@
 }
 
 .program-selection__owner-contacts-item {
-  display: flex;
   position: relative;
 
   &:not(:last-of-type) {
@@ -296,6 +226,26 @@
   &--phone {
     margin-left: 9px;
   }
+  // Стайлгайд
+  &:focus + .program-selection__mail-icon, &:focus + .program-selection__phone-icon {
+    fill: $leaf;
+  }
+
+  &:invalid:focus + .program-selection__mail-icon, &:focus + .program-selection__phone-icon {
+    fill: #ff8282;
+  }
+}
+
+.program-selection__mail-icon {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+.program-selection__phone-icon {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
 }
 
 // Поле с комментарием
@@ -322,6 +272,16 @@
   border: 1px solid rgba(#cdcdcd, 0.5);
   resize: none;
   overflow: auto;
+  // Стайлгайд
+  &:hover {
+    border-color: rgba(#cdcdcd, 1);
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    border: 2px solid $greyish-brown;
+  }
 }
 
 // Дополнительные товары
@@ -345,6 +305,59 @@
 .program-selection__additional-goods-item {
   margin-bottom: 24px;
   margin-left: 46px;
+}
+
+// Кастомный чекбокс
+
+.program-selection__label--checkbox {
+  margin: 0;
+
+  position: relative;
+  // Рамка
+  &::before {
+    content: "";
+    display: block;
+
+    width: 30px;
+    height: 30px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #cdcdcd;
+
+    position: absolute;
+    top: -5px;
+    left: -46px;
+  }
+  // Галка
+  &::after {
+    content: "";
+    display: none;
+
+    width: 22px;
+    height: 17px;
+
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 2px;
+    left: -42px;
+  }
+  // Стайлгайд
+  &:hover::before, &:focus::before {
+    border-color: #bababa;
+  }
+}
+
+// Работа кастомных чекбоксов
+
+.program-selection__input[type="checkbox"]:checked + .program-selection__label--checkbox::after {
+  display: block;
+}
+
+.program-selection__input[type="checkbox"]:disabled + .program-selection__label--checkbox {
+  opacity: 0.3;
 }
 
 // Кнопка и сноска
@@ -505,17 +518,14 @@
     }
   }
 
-  // иконки
-  .program-selection__label {
-    &--email::after {
-      right: 18px;
-      bottom: 18px;
-    }
+  .program-selection__mail-icon {
+    right: 18px;
+    bottom: 18px;
+  }
 
-    &--phone::after {
-      right: 15px;
-      bottom: 15px;
-    }
+  .program-selection__phone-icon {
+    right: 15px;
+    bottom: 15px;
   }
 
   // Поле с комментарием
