@@ -3,9 +3,9 @@
 
   display: flex;
   align-items: center;
-  justify-content: center;
 
   width: 100%;
+  height: 62px;
   min-height: 62px;
 
   padding: 0;
@@ -14,8 +14,15 @@
   border-bottom: 1px solid rgba(#000000, 0.1);
 }
 
-.social__item:not(:last-of-type) {
-  margin-right: 26px;
+.social__item {
+  &--vk {
+    margin-right: 26px;
+    margin-left: 69px;
+  }
+
+  &--ig {
+    margin-right: 23px;
+  }
 }
 
 .social__link {
@@ -27,6 +34,16 @@
 
   width: 30px;
   height: 30px;
+
+  // Стайлгайд
+  &:hover .social__icon,
+  &:focus .social__icon {
+    fill: $leaf;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet) {
@@ -34,6 +51,16 @@
     width: auto;
     min-width: 130px;
     border: none;
+  }
+
+  .social__item {
+    &--vk {
+      margin-left: 0;
+    }
+
+    &--ig {
+      margin-right: 17px;
+    }
   }
 
   .social__icon {

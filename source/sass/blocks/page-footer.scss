@@ -9,47 +9,67 @@
 }
 
 .page-footer__logo {
-  margin-top: 39px;
-  margin-bottom: 27px;
+  margin-top: 41px;
+  margin-bottom: 17px;
+
+  // Стайлгайд
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__copyright {
   width: 100%;
-  min-height: 72px;
 
   display: flex;
   align-items: center;
 
+  margin-bottom: 20px;
+
   font-size: 16px;
   line-height: 1;
   color: $greyish-brown;
+
+  // Стайлгайд
+  &:hover .page-footer__academy-logo,
+  &:focus .page-footer__academy-logo {
+    fill: $leaf;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__academy-logo {
-  margin-right: -6px;
+  margin-right: -7px;
   margin-left: auto;
 }
 
 @media (min-width: $tablet) {
   .page-footer__wrapper {
     flex-direction: row;
-    align-items: center;
+    justify-content: space-between;
 
+    height: 150px;
     min-height: 150px;
   }
 
   .page-footer__logo {
     margin: 0;
-    margin-top: 6px;
   }
 
   .page-footer__social {
-    margin-left: 155px;
-    outline: 1px solid red;
+    margin-left: 25px;
   }
 
   .page-footer__copyright {
-    margin-left: auto;
+    margin-top: 19px;
     width: auto;
   }
 

@@ -2,6 +2,8 @@
   @include oswald (20px, 1, 500);
   text-transform: uppercase;
 
+  min-height: 65px;
+
   display: flex;
   flex-wrap: wrap;
 
@@ -12,12 +14,35 @@
 
 .main-nav__logo {
   display: flex;
+
   margin-top: 11px;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
   margin-left: 20px;
+
+  // Стайлгайд
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 // Управление отображением мобильного меню
+
+// Скрипт не работает (меню открыто)
+.main-nav--nojs .main-nav__menu-button {
+  display: none;
+}
+
+// Меню скрыто
+.main-nav--closed .main-nav__list {
+  display: none;
+}
+
+// Кнопка меню
 .main-nav__menu-button {
   width: 40px;
   height: 40px;
@@ -28,41 +53,27 @@
   position: absolute;
   top: 10px;
   right: 12px;
-
+}
+// Крестик
+.main-nav .main-nav__menu-button {
   background-image: url("../img/icon-close.svg");
   background-size: 19px;
   background-repeat: no-repeat;
   background-position: 50%;
-  outline: 1px solid red;
-  // Меню закрыто
-  &--closed::before {
-    content: "";
-    display: block;
-
-    width: 25px;
-    height: 25px;
-
-    background-color: #ffffff;
-    background-image: url("../img/icon-mobile-menu.svg");
-    background-size: 25px 19px;
-    background-repeat: no-repeat;
-    background-position: 50%;
-  }
-  // Скрипт не работает (меню открыто)
-  &--nojs {
-    display: none;
-  }
 }
-
-// Сокрытие списка меню
-.main-nav__menu-button--closed ~ .main-nav__list {
-  display: none;
+// Крестик
+.main-nav--closed .main-nav__menu-button {
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-size: 25px 19px;
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
 
 // Стили списка меню
 .main-nav__list {
   @include list-reset;
 
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -80,6 +91,16 @@
   padding-bottom: 20px;
 
   box-sizing: border-box;
+
+  // Стайлгайд
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
 }
 
 // Планшетная версия
@@ -92,7 +113,7 @@
   }
 
   .main-nav__logo-img {
-    width: 191px;
+    width: 173px;
     height: 64px;
 
     margin-left: -19px;
@@ -103,6 +124,9 @@
   }
 
   .main-nav__list {
+    width: auto;
+
+    margin-top: 14px;
     margin-left: auto;
   }
 
@@ -142,6 +166,8 @@
   .main-nav__logo-img {
     width: 219px;
     height: 60px;
+
+    margin-left: -28px;
   }
 
   .main-nav__link {

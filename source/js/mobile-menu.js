@@ -1,20 +1,32 @@
-var mobile = window.matchMedia("(max-width: 767px)");
+var tabletWidth = 768;
+var mainNav = document.querySelector(".main-nav");
 var menuButton = document.querySelector(".main-nav__menu-button");
-var menuIsClosed = document.querySelector(".main-nav__menu-button--closed");
-var menuIsOpened = document.querySelector(".main-nav__menu-button--opened");
+var menuIsClosed = document.querySelector(".main-nav--closed");
 
 // Активация мобильного меню
-menuButton.classList.remove("main-nav__menu-button--nojs");
+mainNav.classList.remove("main-nav--nojs");
 
-if (mobile.matches) {
-  menuButton.classList.add("main-nav__menu-button--closed");
-};
-
-console.log("Мобильное меню активировано");
+if (window.outerWidth < tabletWidth) {
+  mainNav.classList.add("main-nav--closed");
+  console.log("Мобильная версия меню");
+}
 
 // Переключение состояния меню
 menuButton.addEventListener("click", function(evt) {
   evt.preventDefault();
-  menuButton.classList.toggle("main-nav__menu-button--closed");
+  mainNav.classList.toggle("main-nav--closed");
   console.log("Переключили состояние меню");
+});
+
+// Отслеживание ширины окна
+window.addEventListener("resize", function() {
+  if (window.outerWidth < tabletWidth) {
+    mainNav.classList.add("main-nav--closed");
+    console.log("Мобильная версия меню");
+  }
+
+  if (window.outerWidth >= tabletWidth && mainNav.classList.contains("main-nav--closed")) {
+    mainNav.classList.remove("main-nav--closed");
+    console.log("Отключили мобильную версию меню");
+  }
 });

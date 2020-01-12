@@ -107,6 +107,18 @@
     left: 96px;
     top: 4px;
     background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
+
+  // Стайлгайд
+  &:hover::after,
+  &:focus::after {
+    width: 34px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

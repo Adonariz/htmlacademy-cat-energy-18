@@ -16,7 +16,7 @@
   <body>
     <header class="page-header">
       <div class="page-header__wrapper">
-        <nav class="main-nav main-nav--desktop">
+        <nav class="main-nav main-nav--desktop main-nav--nojs">
           <a class="main-nav__logo">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
@@ -24,7 +24,7 @@
               <img class="main-nav__logo-img" src="img/logo-mobile.svg" alt="Логотип" width="191" height="39">
             </picture>
           </a>
-          <button class="main-nav__menu-button main-nav__menu-button--nojs" type="button"><span class="visually-hidden">Кнопка меню</span></button>
+          <button class="main-nav__menu-button" type="button"><span class="visually-hidden">Кнопка меню</span></button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link main-nav__link--active">Главная</a>
@@ -87,7 +87,7 @@
       </section>
 
       <section class="product-presentation">
-        <div class="wrapper">
+        <div class="wrapper product-presentation__wrapper">
           <h2 class="product-presentation__title">Живой пример</h2>
           <div class="product-presentation__container">
             <div class="product-presentation__text-container">
@@ -107,12 +107,20 @@
               </div>
             </div>
             <div class="product-presentation__before-after">
-              <img class="product-presentation__photo product-presentation__photo--before" src="img/before-mobile@1x.png" alt="Фото до" width="311" height="232">
-              <img class="product-presentation__photo product-presentation__photo--after" src="img/after-mobile@1x.png" alt="Фото после" width="311" height="232">
+              <picture class="product-presentation__photo-wrapper product-presentation__photo-wrapper--before">
+                <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+                <img class="product-presentation__photo product-presentation__photo--before" src="img/before-mobile@1x.png" alt="Фото до" width="315" height="238">
+              </picture>
+              <picture class="product-presentation__photo-wrapper product-presentation__photo-wrapper--after">
+                <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+                <img class="product-presentation__photo product-presentation__photo--after" src="img/after-mobile@1x.png" alt="Фото после" width="311" height="232">
+              </picture>
               <div class="product-presentation__slider-wrapper">
-                <span class="product-presentation__label product-presentation__label--before">Было</span>
-                <div class="product-presentation__slider-btn"></div>
+                <div class="product-presentation__slider-btn" tabindex="0"></div>
                 <div class="product-presentation__slider-scale"></div>
+                <span class="product-presentation__label product-presentation__label--before">Было</span>
                 <span class="product-presentation__label product-presentation__label--after">Стало</span>
               </div>
             </div>
@@ -122,13 +130,17 @@
 
       <section class="about-us about-us--index">
         <h2 class="visually-hidden">Адрес магазина</h2>
-        <div class="wrapper about-us__wrapper">
-          <p class="about-us__partnership">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
-          <p class="about-us__adress">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 <span class="about-us__city">Санкт-Петербург</span></p>
+        <div class="wrapper about-us__wrapper about-us__wrapper--index">
+          <div class="about-us__text-container">
+            <p class="about-us__partnership">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+            <p class="about-us__adress">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 <span class="about-us__city">Санкт-Петербург</span></p>
+          </div>
         </div>
-        <div class="about-us__map">
+        <picture class="about-us__map">
+          <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
           <img class="about-us__map-img" src="img/bg-map-mobile@1x.png" alt="Адрес магазина на карте" width="320" height="400">
-        </div>
+        </picture>
       </section>
     </main>
 
@@ -140,7 +152,7 @@
         <ul class="page-footer__social social">
           <li class="social__item social__item--vk">
             <a class="social__link social__link--vk" href="#" title="Наш Вконтакте">
-              <svg class="social__icon social__icon--vk" width="23" height="18"  fill="#666666" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
+              <svg class="social__icon social__icon--vk" width="23" height="18"  fill="#666666" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
                 <path d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
                   c0,0.1,0,0.6-0.3,0.9c-0.3,0.3-0.8,0.4-0.9,0.4h-1.4c-0.7,0-3.2-0.2-5.4-2.3C2.5,7.1,0.2,2.2,0.1,2C0,1.6-0.1,1.2,0.2,0.9
                   s0.8-0.4,1-0.4h3.1c0.1,0,0.4,0.1,0.7,0.3C5.3,1,5.4,1.3,5.5,1.4c0.7,1.5,1.5,2.8,2.6,4C8.2,5,8.3,4,8.2,3.1c0-0.4-0.1-0.8-0.2-1
@@ -160,7 +172,7 @@
           </li>
           <li class="social__item social__item--ig">
             <a class="social__link social__link--ig" href="#" title="Наш Инстаграм">
-              <svg class="social__icon social__icon--ig" width="16" height="16" fill="#666666" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
+              <svg class="social__icon social__icon--ig" width="16" height="16" fill="#666666" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
                 <path class="st0" d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1H11.8
                   M11.8,0H4.2C1.9,0,0,1.9,0,4.2v7.7C0,14.1,1.9,16,4.2,16h7.7c2.3,0,4.2-1.9,4.2-4.2V4.2C16,1.9,14.1,0,11.8,0z"/>
                 <path class="st0" d="M8,4.9c1.7,0,3.1,1.4,3.1,3.1S9.7,11.1,8,11.1S4.9,9.7,4.9,8S6.3,4.9,8,4.9 M8,3.9C5.7,3.9,3.9,5.7,3.9,8
@@ -190,5 +202,6 @@
 
     <!-- Управление мобильным меню -->
     <script src="js/mobile-menu.js"></script>
+
   </body>
 </html>
