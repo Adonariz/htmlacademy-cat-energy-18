@@ -51,17 +51,17 @@
               <ul class="program-selection__cat-data-list">
                 <li class="program-selection__cat-data-item">
                   <label class="program-selection__label" for="cat-name">Имя:*
-                    <input class="program-selection__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
+                    <input class="program-selection__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
                   </label>
                 </li>
                 <li class="program-selection__cat-data-item">
                   <label class="program-selection__label" for="cat-weight">Вес (кг):*
-                    <input class="program-selection__input" type="text" name="cat-weight" id="cat-weight" placeholder="7">
+                    <input class="program-selection__input" type="number" name="cat-weight" id="cat-weight" placeholder="7" required>
                   </label>
                 </li>
                 <li class="program-selection__cat-data-item">
                   <label class="program-selection__label" for="cat-age">Возраст&nbsp;(лет):
-                    <input class="program-selection__input" type="text" name="cat-age" id="cat-age" placeholder="7">
+                    <input class="program-selection__input" type="number" name="cat-age" id="cat-age" placeholder="7">
                   </label>
                 </li>
               </ul>
@@ -85,14 +85,12 @@
               <legend class="program-selection__legend">Контактные данные (владельца кота)</legend>
               <ul class="program-selection__owner-contacts-list">
                 <li class="program-selection__owner-contacts-item">
-                  <label class="program-selection__label program-selection__label--email" for="email">E-mail:*
-                    <input class="program-selection__input program-selection__input--email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
-                  </label>
+                  <label class="program-selection__label program-selection__label--email" for="email">E-mail:*</label>
+                  <input class="program-selection__input program-selection__input--email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
                 </li>
                 <li class="program-selection__owner-contacts-item">
-                  <label class="program-selection__label program-selection__label--phone" for="phone">Телефон:*
-                    <input class="program-selection__input program-selection__input--phone" type="text" name="phone" id="phone" placeholder="8 (960) 900-60-90">
-                  </label>
+                  <label class="program-selection__label program-selection__label--phone" for="phone">Телефон:*</label>
+                  <input class="program-selection__input program-selection__input--phone" type="text" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
                 </li>
               </ul>
             </fieldset>

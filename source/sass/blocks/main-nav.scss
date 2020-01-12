@@ -16,6 +16,14 @@
   display: flex;
   margin-top: 11px;
   margin-left: 20px;
+  // Стайлгайд
+  &:hover, &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 // Управление отображением мобильного меню
@@ -79,6 +87,14 @@
   padding-bottom: 20px;
 
   box-sizing: border-box;
+  // Стайлгайд
+  &[href]:hover, &[href]:focus {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
 }
 
 // Планшетная версия

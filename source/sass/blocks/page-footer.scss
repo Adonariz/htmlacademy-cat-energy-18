@@ -11,6 +11,14 @@
 .page-footer__logo {
   margin-top: 41px;
   margin-bottom: 17px;
+  // Стайлгайд
+  &:hover, &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__copyright {
@@ -24,6 +32,14 @@
   font-size: 16px;
   line-height: 1;
   color: $greyish-brown;
+  // Стайлгайд
+  &:hover .page-footer__academy-logo, &:focus .page-footer__academy-logo {
+    fill: $leaf;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__academy-logo {

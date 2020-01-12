@@ -34,6 +34,14 @@
 
   width: 30px;
   height: 30px;
+  // Стайлгайд
+  &:hover .social__icon, &:focus .social__icon {
+    fill: $leaf;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet) {

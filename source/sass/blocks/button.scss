@@ -9,13 +9,29 @@
   text-transform: uppercase;
 
   border: none;
-}
 
-.button--green {
-  background-color: $leaf;
-}
+  &--green {
+    background-color: $leaf;
+    // Стайлгайд
+    &:hover, &:focus {
+      background-color: #5eaa2f;
+    }
 
-.button--gray {
-  color: $greyish-brown;
-  background-color: $light-grey;
+    &:active {
+      color: rgba($white-1, 0.3);
+    }
+  }
+
+  &--gray {
+    color: $greyish-brown;
+    background-color: $light-grey;
+    // Стайлгайд
+    &:hover, &:focus {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba($greyish-brown, 0.3);
+    }
+  }
 }
