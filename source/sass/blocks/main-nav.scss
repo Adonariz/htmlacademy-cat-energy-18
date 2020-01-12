@@ -14,10 +14,14 @@
 
 .main-nav__logo {
   display: flex;
+
   margin-top: 11px;
+  margin-bottom: 15px;
   margin-left: 20px;
+
   // Стайлгайд
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     opacity: 0.8;
   }
 
@@ -87,8 +91,10 @@
   padding-bottom: 20px;
 
   box-sizing: border-box;
+
   // Стайлгайд
-  &[href]:hover, &[href]:focus {
+  &[href]:hover,
+  &[href]:focus {
     opacity: 0.6;
   }
 

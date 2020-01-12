@@ -13,7 +13,8 @@
   &--green {
     background-color: $leaf;
     // Стайлгайд
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: #5eaa2f;
     }
 
@@ -26,7 +27,8 @@
     color: $greyish-brown;
     background-color: $light-grey;
     // Стайлгайд
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: #ebebeb;
     }
 

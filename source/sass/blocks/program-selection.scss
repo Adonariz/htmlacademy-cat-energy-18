@@ -79,9 +79,10 @@
 
   position: relative;
 
-  &[type=number] {
+  &[type="number"] {
     appearance: textfield;
   }
+
   // Стайлгайд
   &:hover {
     border-color: rgba(#cdcdcd, 1);
@@ -115,7 +116,6 @@
 }
 
 .program-selection__cat-data-item {
-
   &:not(:last-of-type) {
     margin-bottom: 14px;
   }
@@ -180,8 +180,10 @@
     top: 4px;
     left: -37px;
   }
+
   // Стайлгайд
-  &:hover::before, &:focus::before {
+  &:hover::before,
+  &:focus::before {
     border-color: #bababa;
   }
 }
@@ -218,20 +220,28 @@
   }
 }
 
-.program-selection__input {
-  &--email {
-    margin-left: 11px;
-  }
+.program-selection__input--email {
+  margin-left: 11px;
 
-  &--phone {
-    margin-left: 9px;
-  }
   // Стайлгайд
-  &:focus + .program-selection__mail-icon, &:focus + .program-selection__phone-icon {
+  &:focus + .program-selection__mail-icon {
     fill: $leaf;
   }
 
-  &:invalid:focus + .program-selection__mail-icon, &:focus + .program-selection__phone-icon {
+  &:invalid:focus + .program-selection__mail-icon {
+    fill: #ff8282;
+  }
+}
+
+.program-selection__input--phone {
+  margin-left: 9px;
+
+  // Стайлгайд
+  &:focus + .program-selection__phone-icon {
+    fill: $leaf;
+  }
+
+  &:invalid:focus + .program-selection__phone-icon {
     fill: #ff8282;
   }
 }
@@ -344,8 +354,10 @@
     top: 2px;
     left: -42px;
   }
+
   // Стайлгайд
-  &:hover::before, &:focus::before {
+  &:hover::before,
+  &:focus::before {
     border-color: #bababa;
   }
 }
@@ -508,14 +520,12 @@
   }
 
   // инпуты
-  .program-selection__input {
-    &--email {
-      margin-left: 19px;
-    }
+  .program-selection__input--email {
+    margin-left: 19px;
+  }
 
-    &--phone {
-      margin-left: 13px;
-    }
+  .program-selection__input--phone {
+    margin-left: 13px;
   }
 
   .program-selection__mail-icon {
