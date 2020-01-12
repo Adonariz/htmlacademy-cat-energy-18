@@ -2,7 +2,9 @@
   display: flex;
   text-align: center;
 
-  background: url("../img/index-background-mobile@1x.jpg") no-repeat 50% 0, linear-gradient(#64a83c, #64a83c);
+  background: url("../img/index-background-mobile@1x.jpg"), linear-gradient(#64a83c, #64a83c);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
   background-size: 320px 305px;
 
   @media (min-resolution: $retina) {
@@ -100,6 +102,7 @@
     margin-top: -114px;
 
     background: url("../img/index-background-desktop@1x.jpg") no-repeat right, linear-gradient(to right, $white-1 50%, #64a83c 50%);
+    background-size: contain;
 
     @media (min-resolution: $retina) {
       background-image: url("../img/index-background-desktop@2x.jpg");
