@@ -105,7 +105,8 @@
     background-size: contain;
 
     @media (min-resolution: $retina) {
-      background-image: url("../img/index-background-desktop@2x.jpg");
+      background: url("../img/index-background-desktop@2x.jpg") no-repeat right, linear-gradient(to right, $white-1 50%, #64a83c 50%);
+      background-size: contain;
     }
   }
 
