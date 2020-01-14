@@ -83,6 +83,12 @@
     appearance: textfield;
   }
 
+  &[type="number"]::-webkit-inner-spin-button,
+  &[type="number"]::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
   // Стайлгайд
   &:hover {
     border-color: rgba(#cdcdcd, 1);
@@ -261,8 +267,6 @@
     fill: #ff8282;
   }
 }
-
-
 
 // Поле с комментарием
 
