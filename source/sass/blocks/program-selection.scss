@@ -220,6 +220,22 @@
   }
 }
 
+.program-selection__mail-icon {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+
+  fill: #222222;
+}
+
+.program-selection__phone-icon {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+
+  fill: #222222;
+}
+
 .program-selection__input--email {
   margin-left: 11px;
 
@@ -246,17 +262,7 @@
   }
 }
 
-.program-selection__mail-icon {
-  position: absolute;
-  right: 15px;
-  bottom: 15px;
-}
 
-.program-selection__phone-icon {
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-}
 
 // Поле с комментарием
 
