@@ -127,7 +127,7 @@
 
     position: absolute;
     top: 95px;
-    left: 110px;
+    left: 20px;
 
     background-color: $white-1;
   }
@@ -142,7 +142,10 @@
   }
 
   .about-us__map {
+    height: 400px;
     margin-top: 0;
+
+    overflow: hidden;
 
     &::after {
       left: calc(50% + 278px);
@@ -151,5 +154,8 @@
 
   .about-us__map-img {
     width: 1440px;
+
+    position: absolute;
+    left: calc(50% - 720px);
   }
 }
