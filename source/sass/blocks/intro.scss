@@ -112,7 +112,11 @@
 
   .intro__wrapper {
     min-height: 696px;
+    width: 50%;
+
     position: relative;
+
+    background-color: $white-1;
   }
 
   .intro__title {
@@ -134,7 +138,7 @@
     margin: 0;
 
     position: absolute;
-    right: 238px;
+    left: 450px;
     top: 142px;
   }
 

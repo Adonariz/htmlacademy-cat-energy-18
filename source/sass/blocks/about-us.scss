@@ -54,7 +54,6 @@
     position: absolute;
     bottom: 170px;
     left: calc(50% - (62px / 2));
-    z-index: 1;
 
     width: 55px;
     height: 53px;
@@ -68,6 +67,11 @@
 .about-us__map-img {
   display: block;
   margin: 0 auto;
+}
+
+.about-us__map-iframe {
+  position: absolute;
+  top: 114px;
 }
 
 @media (min-width: $tablet) {
@@ -119,6 +123,11 @@
   .about-us__map-img {
     width: 768px;
   }
+
+  .about-us__map-iframe {
+    top: 201px;
+    height: 396px;
+  }
 }
 
 @media (min-width: $desktop) {
@@ -157,5 +166,10 @@
 
     position: absolute;
     left: calc(50% - 720px);
+  }
+
+  .about-us__map-iframe {
+    top: 0;
+    height: 400px;
   }
 }

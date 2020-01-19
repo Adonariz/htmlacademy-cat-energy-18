@@ -638,6 +638,10 @@
 
 @media (min-width: $desktop) {
   // Общие
+  .program-selection {
+    overflow-x: hidden;
+  }
+
   .program-selection__title {
     margin-top: 73px;
   }
@@ -656,9 +660,9 @@
   .program-selection__legend {
     // Декоративная полоска
     &::after {
-      width: 1440px;
+      width: 2560px;
       top: 23px;
-      left: -80px;
+      left: -620px;
     }
   }
 
