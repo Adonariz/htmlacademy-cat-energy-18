@@ -218,6 +218,10 @@
 }
 
 @media (min-width: $desktop) {
+  .additional-goods {
+    overflow-x: hidden;
+  }
+
   .additional-goods__title {
     margin-top: 73px;
     margin-left: -40px;
@@ -225,8 +229,8 @@
     padding-left: 39px;
 
     &::before {
-      width: 1440px;
-      left: -110px;
+      width: 2560px;
+      left: -620px;
     }
   }
 
