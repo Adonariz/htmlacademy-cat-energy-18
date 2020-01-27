@@ -188,9 +188,12 @@
   }
 
   // Стайлгайд
-  &:hover::before,
-  &:focus::before {
+  &:hover::before {
     border-color: #bababa;
+  }
+
+  &:focus::before {
+    box-shadow: 5px 5px 5px 5px $leaf;
   }
 }
 
@@ -202,6 +205,10 @@
 
 .program-selection__input[type="radio"]:disabled + .program-selection__label--radio {
   opacity: 0.3;
+}
+
+.program-selection__input[type="radio"]:focus + .program-selection__label--radio::before {
+  box-shadow: 0 0 2px 1px $leaf;
 }
 
 // Контактные данные владельца
@@ -366,8 +373,7 @@
   }
 
   // Стайлгайд
-  &:hover::before,
-  &:focus::before {
+  &:hover::before {
     border-color: #bababa;
   }
 }
@@ -380,6 +386,11 @@
 
 .program-selection__input[type="checkbox"]:disabled + .program-selection__label--checkbox {
   opacity: 0.3;
+}
+
+// Фокус для чекбокса
+.program-selection__input[type="checkbox"]:focus + .program-selection__label--checkbox::before {
+  box-shadow: 0 0 1px 1px $leaf;
 }
 
 // Кнопка и сноска
