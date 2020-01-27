@@ -191,6 +191,7 @@
   &:hover::before {
     border-color: #bababa;
   }
+
   &:focus::before {
     box-shadow: 5px 5px 5px 5px $leaf;
   }
